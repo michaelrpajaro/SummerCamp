@@ -443,9 +443,14 @@ Thanks!`;
 
 // Photo URLs. Leave any blank to show a labeled placeholder instead.
 const PHOTOS = {
-    hero:     '',   // wide hero shot — sim rigs / a camper racing
-    overview: '',   // a coaching / whiteboard moment
-    gallery:  ['', '', '', '', ''],  // facility, racing, podium, etc.
+    hero:     'https://static1.squarespace.com/static/675f613ae652273e9723cfd3/t/6a1112add96cd879784af4e1/1779503790957/CTA09711.jpg',   // wide hero shot
+    overview: 'https://static1.squarespace.com/static/675f613ae652273e9723cfd3/t/6a11130bfdf9506a763b21c0/1779503883984/CTA09873.jpg',   // coaching moment
+    gallery: [
+        {label:'Sim Rigs',   wide:true, url:'https://static1.squarespace.com/static/675f613ae652273e9723cfd3/t/6a1113e4402a0268b3a7f70b/1779504102872/POR00435+%281%29.jpg'},
+        {label:'On Track',              url:'https://static1.squarespace.com/static/675f613ae652273e9723cfd3/t/6a1113b084c67160df539359/1779504049382/POR00519.jpg'},
+        {label:'Big Screen',            url:'https://static1.squarespace.com/static/675f613ae652273e9723cfd3/t/6a111396e7c0b210aecc8176/1779504023303/CTA09047.jpg'},
+        {label:'Podium',     wide:true, url:'https://static1.squarespace.com/static/675f613ae652273e9723cfd3/t/6a11133f99592642019e47e0/1779503937419/CTA06651.jpg'},
+    ],
 };
 
 /* ════════════════════════════════════════════════════════════════
@@ -487,12 +492,11 @@ function renderPhotos(){
         '🏁', 'Hero Photo', 'Set PHOTOS.hero to a wide shot of the sim rigs or a camper racing.', 'SIM1Racing Summer Camp');
     fillPhoto(document.getElementById('overview-photo'), PHOTOS.overview,
         '📸', 'Coaching Photo', 'Set PHOTOS.overview to a whiteboard or coaching moment.', 'Camp coaching session');
-    const labels = ['Sim Rigs', 'On Track', 'Whiteboard', 'Big Screen', 'Podium'];
-    document.getElementById('gallery-out').innerHTML = (PHOTOS.gallery || []).map((url, i) => {
-        const wide = i === 0 ? ' wide' : '';
-        const inner = url
-            ? `<img src="${url}" alt="Camp photo ${i+1}">`
-            : photoPlaceholder('📷', labels[i] || 'Photo', 'Add a URL to PHOTOS.gallery to fill this slot.');
+    document.getElementById('gallery-out').innerHTML = (PHOTOS.gallery || []).map(g => {
+        const wide = g.wide ? ' wide' : '';
+        const inner = g.url
+            ? `<img src="${g.url}" alt="${g.label}">`
+            : photoPlaceholder('📷', g.label || 'Photo', 'Add a URL to this PHOTOS.gallery entry to fill the slot.');
         return `<div class="car-photo${wide}">${inner}</div>`;
     }).join('');
 }
