@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIM1Racing Summer Racing Camp 2026 — Paramus, NJ · Ages 7–17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+    --red:#EF4444; --red-d:#991b1b;
+    --bg:#000; --bg2:#0a0a0a; --card:#1a1a1a; --card2:#111; --card3:#0d0d0d;
+    --border:#2a2a2a; --border2:#1a1a1a; --border3:#333;
+    --blue:#60a5fa; --blue-d:#1d4ed8; --green:#22c55e; --green-d:#166534;
+    --gold:#fbbf24; --amber:#d4a017; --bronze:#cd7f32; --silver:#d1d5db;
+    --cond:'Barlow Condensed',sans-serif; --body:'Barlow',sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:#fff;font-family:var(--body);-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+h1,h2,h3{margin:0;}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:500;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.nav-brand{font-family:var(--cond);font-weight:900;font-size:1.1em;text-transform:uppercase;letter-spacing:1px;color:#fff;display:flex;align-items:center;gap:9px;}
+.nav-brand .dot{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red);}
+.nav-links{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.nav-links a{font-family:var(--cond);font-weight:800;font-size:0.78em;text-transform:uppercase;letter-spacing:1.5px;color:#888;text-decoration:none;padding:6px 12px;border-radius:6px;transition:color .15s,background .15s;}
+.nav-links a:hover{color:#fff;background:var(--card2);}
+.nav-links a.nav-cta{background:var(--red);color:#fff;}
+.nav-links a.nav-cta:hover{filter:brightness(1.12);background:var(--red);}
+
+/* ── SHARED ── */
+.section{padding:80px 40px;}
+.wrap{max-width:1200px;margin:0 auto;}
+.wrap-md{max-width:1000px;margin:0 auto;}
+.eyebrow{font-family:var(--cond);font-size:0.75em;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
+.h2{font-family:var(--cond);font-size:2.8em;font-weight:900;text-transform:uppercase;color:#fff;line-height:1;}
+.lead{font-family:var(--body);font-size:1em;color:#888;line-height:1.7;}
+.center{text-align:center;}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 36px;border-radius:8px;font-family:var(--cond);font-size:1em;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:1px;border:none;cursor:pointer;transition:filter .15s,transform .1s;}
+.btn:hover{filter:brightness(1.12);}
+.btn:active{transform:scale(.98);}
+.btn-outline{background:transparent;border:2px solid var(--border3);}
+.btn-sm{padding:9px 18px;font-size:0.82em;border-radius:7px;}
+.btn-lg{padding:18px 48px;font-size:1.2em;}
+.badge{display:inline-block;background:var(--red);color:#fff;font-family:var(--cond);font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:5px 18px;border-radius:14px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;}
+
+/* ── HERO ── */
+.hero{padding:120px 40px 80px;background:var(--bg);position:relative;overflow:hidden;}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(239,68,68,0.13) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center;}
+.hero h1{font-family:var(--cond);font-size:4.4em;font-weight:900;text-transform:uppercase;color:#fff;line-height:0.95;margin:18px 0 20px;}
+.hero h1 .accent{color:var(--red);}
+.hero p{font-family:var(--body);font-size:1.18em;line-height:1.65;color:#b0b0b0;margin:0 0 30px;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px;}
+.hero-meta span{font-family:var(--cond);font-size:0.8em;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#bbb;background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:6px 14px;}
+.hero-cta{display:flex;gap:13px;flex-wrap:wrap;}
+.car-photo{aspect-ratio:16/11;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(150deg,#160606,#1a1a1a 60%,#0a0a0a);position:relative;}
+.car-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;}
+.ph-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 75%,rgba(239,68,68,0.14),transparent 62%);}
+.ph-ico{font-size:2.6em;margin-bottom:12px;position:relative;}
+.ph-t{font-family:var(--cond);font-weight:900;font-size:1.2em;text-transform:uppercase;letter-spacing:1px;color:#666;position:relative;}
+.ph-s{font-family:var(--body);font-size:0.8em;color:#444;margin-top:6px;max-width:240px;position:relative;}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px;}
+.hero-stat{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;}
+.hero-stat .v{font-family:var(--cond);font-size:1.7em;font-weight:900;color:var(--red);line-height:1;}
+.hero-stat .l{font-family:var(--body);font-size:0.76em;color:#888;text-transform:uppercase;letter-spacing:0.5px;margin-top:6px;}
+
+/* ── OVERVIEW ── */
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;}
+.ov-text p{font-family:var(--body);font-size:1.05em;line-height:1.75;color:#b8b8b8;margin:0 0 18px;}
+.ov-feats{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.ov-feats li{font-family:var(--body);font-size:0.95em;color:#ccc;line-height:1.5;padding-left:28px;position:relative;}
+.ov-feats li:before{content:'✓';position:absolute;left:0;top:0;color:var(--red);font-weight:800;}
+
+/* ── SKILL / DAY CARDS ── */
+.week-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+.week-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:24px 20px;position:relative;overflow:hidden;}
+.week-card .bar{position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);}
+.week-card .num{font-family:var(--cond);font-size:2.4em;font-weight:900;color:var(--border3);line-height:1;}
+.week-card .wk{font-family:var(--cond);font-size:0.95em;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-top:6px;}
+.week-card .dt{font-family:var(--body);font-size:1.22em;font-weight:800;color:#fff;margin:7px 0 4px;line-height:1.15;}
+.week-card .car{font-family:var(--body);font-size:0.95em;font-weight:700;color:#ddd;margin-top:12px;}
+.week-card .meta{font-family:var(--body);font-size:0.85em;color:#999;margin-top:6px;line-height:1.45;}
+.week-card .pts{display:inline-block;margin-top:13px;font-family:var(--cond);font-size:0.7em;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold);background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.3);border-radius:6px;padding:3px 9px;}
+
+/* ── DAY-BY-DAY ACCORDION ── */
+.days{display:flex;flex-direction:column;gap:12px;}
+.day{background:var(--card2);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.day-head{display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer;user-select:none;transition:background .15s;}
+.day-head:hover{background:#161616;}
+.day-head .dnum{font-family:var(--cond);font-size:1.5em;font-weight:900;color:var(--red);min-width:44px;line-height:1;}
+.day-head .dmain{flex:1;min-width:0;}
+.day-head .dtitle{font-family:var(--cond);font-size:1.45em;font-weight:900;text-transform:uppercase;color:#fff;line-height:1.05;}
+.day-head .dsub{font-family:var(--body);font-size:0.9em;color:#999;margin-top:3px;}
+.day-head .dsub b{color:#ddd;font-weight:700;}
+.day-head .dchev{font-family:var(--cond);color:#666;font-size:1.4em;transition:transform .2s;flex-shrink:0;}
+.day.open .dchev{transform:rotate(180deg);}
+.day-body{display:none;padding:0 24px 24px;}
+.day.open .day-body{display:block;}
+.day-goal{font-family:var(--body);font-size:0.92em;color:#bbb;line-height:1.6;background:var(--card3);border:1px solid var(--border2);border-left:3px solid var(--red);border-radius:8px;padding:14px 16px;margin-bottom:20px;}
+.day-goal b{color:var(--red);font-family:var(--cond);font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:0.85em;}
+.tl-label{font-family:var(--cond);font-size:0.78em;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#777;margin:18px 0 12px;border-bottom:1px solid var(--border2);padding-bottom:7px;}
+.tl-label.am{color:var(--blue);}
+.tl-label.pm{color:var(--gold);}
+.tl-label.ext{color:var(--green);}
+.tl{display:flex;flex-direction:column;gap:2px;}
+.tl-row{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--border2);}
+.tl-row:last-child{border-bottom:none;}
+.tl-time{font-family:var(--body);font-size:0.85em;font-weight:700;color:#888;white-space:nowrap;}
+.tl-act .ta-t{font-family:var(--body);font-size:0.98em;font-weight:700;color:#fff;}
+.tl-act .ta-t .star{color:var(--gold);}
+.tl-act .ta-d{font-family:var(--body);font-size:0.86em;color:#999;line-height:1.5;margin-top:3px;}
+.day-pickup{font-family:var(--cond);font-size:0.78em;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#777;text-align:center;padding:10px;margin:6px 0;border-top:1px dashed var(--border3);border-bottom:1px dashed var(--border3);}
+
+/* ── PRICING ── */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+.price-card{background:var(--card2);border:1px solid var(--border);border-radius:16px;padding:30px 28px;position:relative;}
+.price-card.feature{border-color:rgba(239,68,68,0.5);background:linear-gradient(160deg,#160606,var(--card2) 55%);}
+.price-card .rec{position:absolute;top:-13px;left:50%;transform:translateX(-50%);}
+.price-card .pname{font-family:var(--cond);font-size:1.7em;font-weight:900;text-transform:uppercase;color:#fff;line-height:1;}
+.price-card .phours{font-family:var(--body);font-size:0.92em;color:#999;margin-top:6px;}
+.price-card .pfeats{list-style:none;margin:22px 0;padding:0;display:flex;flex-direction:column;gap:11px;}
+.price-card .pfeats li{font-family:var(--body);font-size:0.9em;color:#cfcfcf;line-height:1.5;padding-left:24px;position:relative;}
+.price-card .pfeats li:before{content:'›';position:absolute;left:0;top:-1px;color:var(--red);font-weight:800;font-size:1.2em;}
+.price-rows{display:flex;gap:12px;margin-top:8px;border-top:1px solid var(--border);padding-top:20px;}
+.price-rows .pr{flex:1;background:var(--card3);border:1px solid var(--border2);border-radius:10px;padding:14px;text-align:center;}
+.price-rows .pr .amt{font-family:var(--cond);font-size:2.1em;font-weight:900;color:#fff;line-height:1;}
+.price-card.feature .price-rows .pr .amt{color:var(--red);}
+.price-rows .pr .per{font-family:var(--body);font-size:0.74em;text-transform:uppercase;letter-spacing:0.5px;color:#888;margin-top:5px;}
+.price-rows .pr .inc{font-family:var(--body);font-size:0.7em;color:var(--gold);margin-top:6px;line-height:1.3;}
+
+/* ── NOTE / BANNER ── */
+.note{background:linear-gradient(135deg,#160606,#1a1a1a);border:1px solid rgba(239,68,68,0.25);border-radius:12px;padding:22px 24px;margin-top:26px;}
+.note .nt-t{font-family:var(--cond);font-size:0.78em;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+.note p{font-family:var(--body);font-size:0.9em;color:#b0b0b0;line-height:1.7;margin:0;}
+.note code{background:transparent;border:none;padding:0;color:var(--red);font-weight:700;font-family:var(--body);font-size:1em;white-space:nowrap;}
+
+.bonus{display:flex;align-items:center;gap:20px;background:linear-gradient(135deg,#14110a,#1a1a1a);border:1px solid rgba(251,191,36,0.3);border-radius:14px;padding:24px 28px;margin-top:24px;flex-wrap:wrap;}
+.bonus .bico{font-size:2.2em;}
+.bonus .btxt{flex:1;min-width:240px;}
+.bonus .btxt .bt-t{font-family:var(--cond);font-size:1.25em;font-weight:900;text-transform:uppercase;color:var(--gold);}
+.bonus .btxt .bt-d{font-family:var(--body);font-size:0.92em;color:#cfcfcf;line-height:1.6;margin-top:5px;}
+
+/* ── CHAMPIONSHIP TABLE ── */
+.champ-wrap{background:var(--card2);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.tbl-scroll{overflow-x:auto;}
+table{width:100%;border-collapse:collapse;}
+.champ-wrap table{min-width:560px;}
+thead th{font-family:var(--body);font-size:0.78em;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#888;text-align:left;padding:15px 22px;border-bottom:1px solid var(--border);background:var(--card3);}
+tbody td{padding:15px 22px;border-bottom:1px solid var(--border2);font-family:var(--body);font-size:0.96em;color:#ccc;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+.champ-wrap .d-tag{font-family:var(--cond);font-weight:900;color:var(--red);font-size:1.05em;}
+.champ-wrap .fmt{color:#e5e5e5;font-weight:600;}
+.champ-wrap .fmt small{display:block;color:#888;font-weight:400;font-size:0.85em;margin-top:2px;}
+.champ-wrap .pts{font-family:var(--cond);font-weight:900;font-size:1.1em;color:#fff;}
+.champ-wrap tr.dbl .pts{color:var(--gold);}
+.champ-wrap tr.fin{background:linear-gradient(90deg,rgba(239,68,68,0.08),transparent);}
+.champ-wrap tr.fin .pts{color:var(--red);}
+.col-c{text-align:center;}
+.pill{display:inline-block;font-family:var(--cond);font-size:0.62em;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-radius:5px;padding:2px 7px;margin-left:8px;vertical-align:middle;}
+.pill.gold{color:var(--gold);background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.35);}
+.pill.red{color:var(--red);background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35);}
+
+.award-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;}
+.award{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:24px;}
+.award .aw-t{font-family:var(--cond);font-size:1.3em;font-weight:900;text-transform:uppercase;color:#fff;}
+.award .aw-t .em{margin-right:8px;}
+.award .aw-d{font-family:var(--body);font-size:0.9em;color:#999;line-height:1.6;margin-top:8px;}
+
+/* ── GALLERY ── */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.gallery .car-photo{aspect-ratio:4/3;}
+.gallery .car-photo.wide{grid-column:span 2;aspect-ratio:auto;}
+
+/* ── SIGNUP CTA ── */
+.signup{padding:90px 40px;background:var(--bg2);position:relative;overflow:hidden;text-align:center;}
+.signup-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(239,68,68,0.16),transparent 65%);pointer-events:none;}
+.signup .inner{position:relative;z-index:1;max-width:720px;margin:0 auto;}
+.signup h2{font-family:var(--cond);font-size:3.2em;font-weight:900;text-transform:uppercase;color:#fff;line-height:1;}
+.signup p{font-family:var(--body);font-size:1.1em;color:#b0b0b0;line-height:1.6;margin:18px 0 30px;}
+.signup .sub-note{font-family:var(--body);font-size:0.85em;color:#666;margin-top:18px;}
+
+/* ── FOOTER ── */
+.footer{padding:44px 40px;background:var(--bg2);border-top:1px solid var(--border);text-align:center;}
+.footer .f1{font-family:var(--cond);font-weight:900;text-transform:uppercase;letter-spacing:1px;color:#fff;font-size:1.1em;}
+.footer .f2{font-family:var(--body);font-size:0.8em;color:#555;margin-top:8px;line-height:1.6;}
+
+@media(max-width:900px){
+    .hero-inner,.ov-grid,.price-grid,.award-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:3.4em;}
+    .week-grid{grid-template-columns:repeat(2,1fr);}
+    .hero-stats{grid-template-columns:repeat(4,1fr);}
+    .gallery{grid-template-columns:repeat(2,1fr);}
+    .gallery .car-photo.wide{grid-column:span 2;}
+}
+@media(max-width:600px){
+    .section{padding:48px 18px;}
+    .hero{padding:40px 18px 50px;}
+    .nav-inner{padding:12px 18px;}
+    .nav-links{display:none;}
+    .h2{font-size:2em;}
+    .hero h1{font-size:2.7em;}
+    .hero-inner{display:flex;flex-direction:column;gap:18px;}
+    #hero-photo{order:-1;}
+    .week-grid{grid-template-columns:1fr;}
+    .hero-stats{grid-template-columns:repeat(2,1fr);}
+    .signup h2{font-size:2.2em;}
+    .day-head{padding:16px;gap:12px;}
+    .day-head .dtitle{font-size:1.15em;}
+    .day-body{padding:0 16px 18px;}
+    .tl-row{grid-template-columns:1fr;gap:3px;}
+    .tl-time{font-size:0.8em;}
+    .gallery{grid-template-columns:1fr;}
+    .gallery .car-photo.wide{grid-column:span 1;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav"><div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span> SUMMER RACING CAMP</div>
+    <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#skills">The Week</a>
+        <a href="#schedule">Day by Day</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#championship">Championship</a>
+        <a href="#signup" class="nav-cta">Sign Up</a>
+    </div>
+</div></nav>
+
+<!-- ── HERO ── -->
+<header class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+        <div>
+            <span class="badge">SIM1Racing · Paramus, NJ</span>
+            <h1>SUMMER RACING<br><span class="accent">CAMP 2026</span></h1>
+            <p>Five days. Five cars. One championship. Built for kids who've never raced and those who already have — by Friday every camper is ready to compete in a real championship race.</p>
+            <div class="hero-meta">
+                <span>Mon–Fri</span><span>Ages 7–17</span><span>No Experience Needed</span><span>Max 12 / Week</span>
+            </div>
+            <div class="hero-cta">
+                <a href="#signup" class="btn">RESERVE YOUR SPOT</a>
+                <a href="#skills" class="btn btn-outline">SEE THE WEEK</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><div class="v">5</div><div class="l">Days</div></div>
+                <div class="hero-stat"><div class="v">5</div><div class="l">Race Cars</div></div>
+                <div class="hero-stat"><div class="v">12</div><div class="l">Max Campers</div></div>
+                <div class="hero-stat"><div class="v">7–17</div><div class="l">Ages</div></div>
+            </div>
+        </div>
+        <div class="car-photo" id="hero-photo"></div>
+    </div>
+</header>
+
+<!-- ── OVERVIEW ── -->
+<section class="section" id="overview" style="background:var(--bg2);">
+    <div class="wrap">
+        <div class="ov-grid">
+            <div class="ov-text">
+                <div class="eyebrow">PROGRAM OVERVIEW</div>
+                <h2 class="h2" style="margin-bottom:20px;">Built To Make Racers</h2>
+                <p>Each day teaches one new skill — on the whiteboard and on the simulator. Every lesson builds directly on the one before, so a beginner on Monday is racing wheel-to-wheel in a Lamborghini Huracán GT3 by Friday.</p>
+                <p>We run a new group <strong style="color:#ddd;">every week all summer long</strong>, capped at 12 campers so every kid gets real coaching and seat time.</p>
+                <ul class="ov-feats">
+                    <li>Daily whiteboard lesson + coached simulator sessions</li>
+                    <li>A new car and a new skill every single day</li>
+                    <li>Live championship — points, leaderboards, and a Friday final</li>
+                    <li>Friday awards ceremony with a printed certificate</li>
+                    <li>All sim-, whiteboard-, and phone-based — no kits or supplies needed</li>
+                </ul>
+            </div>
+            <div class="car-photo" id="overview-photo" style="aspect-ratio:4/3;"></div>
+        </div>
+
+        <div class="bonus">
+            <div class="bico">⭐</div>
+            <div class="btxt">
+                <div class="bt-t">Full Week Bonus — Unlimited Sim Racing</div>
+                <div class="bt-d">Book any full week of camp and get unlimited open sim time for the entire week — drop in any day the facility is open. Week registrants only.</div>
+            </div>
+        </div>
+
+        <div class="note">
+            <div class="nt-t">⏳ Running All Summer — Spots Are Limited</div>
+            <p>This program runs every week throughout the summer with a new group each week. <strong style="color:#fff;">Maximum 12 campers per week</strong> — once a week fills up, it's closed. Book early to secure your spot.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── SKILL PROGRESSION ── -->
+<section class="section" id="skills" style="background:var(--bg);">
+    <div class="wrap">
+        <div class="center" style="margin-bottom:40px;">
+            <div class="eyebrow">SKILL PROGRESSION</div>
+            <h2 class="h2">One New Skill Every Day</h2>
+            <p class="lead" style="max-width:720px;margin:14px auto 0;">Each day pairs a new car with a new skill — and each one builds directly on the day before.</p>
+        </div>
+        <div class="week-grid" id="skill-cards"></div>
+    </div>
+</section>
+
+<!-- ── DAY BY DAY ── -->
+<section class="section" id="schedule" style="background:var(--bg2);">
+    <div class="wrap-md">
+        <div class="center" style="margin-bottom:40px;">
+            <div class="eyebrow">A LOOK INSIDE THE WEEK</div>
+            <h2 class="h2">Day By Day</h2>
+            <p class="lead" style="max-width:720px;margin:14px auto 0;">Tap any day to see the full schedule — morning half-day, afternoon full-day, and the optional evening extension.</p>
+        </div>
+        <div class="days" id="days-out"></div>
+    </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section class="section" id="pricing" style="background:var(--bg);">
+    <div class="wrap">
+        <div class="center" style="margin-bottom:44px;">
+            <div class="eyebrow">REGISTRATION</div>
+            <h2 class="h2">Pick Your Pass</h2>
+            <p class="lead" style="max-width:640px;margin:14px auto 0;">Sign up for a single day or commit to the full week and chase the camp championship. Full-week passes include unlimited sim access all week.</p>
+        </div>
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="pname">Half Day</div>
+                <div class="phours">9:00 AM – 12:00 PM</div>
+                <ul class="pfeats">
+                    <li>Whiteboard lesson (15–20 min)</li>
+                    <li>Coached simulator session + Time Attack</li>
+                    <li>Daily championship points</li>
+                    <li>Lunch not included — pickup at noon</li>
+                </ul>
+                <div class="price-rows">
+                    <div class="pr"><div class="amt">$80</div><div class="per">Per Day</div></div>
+                    <div class="pr"><div class="amt">$350</div><div class="per">Full Week</div><div class="inc">★ Unlimited sim all week</div></div>
+                </div>
+            </div>
+            <div class="price-card feature">
+                <div class="rec"><span class="badge">★ Recommended</span></div>
+                <div class="pname">Full Day</div>
+                <div class="phours">9:00 AM – 4:00 PM</div>
+                <ul class="pfeats">
+                    <li>Everything in the Half Day</li>
+                    <li>12–1 PM lunch break (bring your own food)</li>
+                    <li>Second coached sim rotation (1–4 PM)</li>
+                    <li>Bonus activities and fun competitions</li>
+                    <li>Friday ceremony with printed certificate</li>
+                </ul>
+                <div class="price-rows">
+                    <div class="pr"><div class="amt">$150</div><div class="per">Per Day</div></div>
+                    <div class="pr"><div class="amt">$600</div><div class="per">Full Week</div><div class="inc">★ Unlimited sim all week</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <div class="nt-t">⏰ Optional 5 PM Extension</div>
+            <p>Stay until 5:00 PM for extra sim time, free racing, and additional competitions. <code>+$20 per day</code> or <code>+$80 for the full week</code>. Extension campers must be pre-registered.</p>
+        </div>
+
+        <div class="center" style="margin-top:34px;">
+            <a href="#signup" class="btn btn-lg">SIGN UP NOW</a>
+        </div>
+    </div>
+</section>
+
+<!-- ── CHAMPIONSHIP ── -->
+<section class="section" id="championship" style="background:var(--bg2);">
+    <div class="wrap-md">
+        <div class="center" style="margin-bottom:36px;">
+            <div class="eyebrow">THE CHAMPIONSHIP SYSTEM</div>
+            <h2 class="h2">Race For The Title</h2>
+            <p class="lead" style="max-width:720px;margin:14px auto 0;">Same format every day — a Time Attack. Drive as many laps as you can; your best clean lap earns championship points. Standings are posted every morning to build the drama all week.</p>
+        </div>
+
+        <div class="champ-wrap">
+            <div class="tbl-scroll">
+                <table>
+                    <thead><tr>
+                        <th>Day</th><th>Competition Format</th><th class="col-c">Time</th><th class="col-c">Points</th>
+                    </tr></thead>
+                    <tbody id="champ-rows"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="award-grid">
+            <div class="award">
+                <div class="aw-t"><span class="em">🏆</span>Camp Champion</div>
+                <div class="aw-d">Highest total points across the four daily Time Attacks plus the Final Race result.</div>
+            </div>
+            <div class="award">
+                <div class="aw-t"><span class="em">📈</span>Most Improved</div>
+                <div class="aw-d">Biggest lap-time improvement from Day 1 to Day 5 — rewards effort and growth, not just natural talent.</div>
+            </div>
+        </div>
+
+        <div class="note">
+            <div class="nt-t">⚡ No Lead Is Safe</div>
+            <p><strong style="color:#fff;">Thursday is Double Points</strong> — the Day 4 Time Attack pays <code>6 / 4 / 2</code> instead of the usual 3 / 2 / 1. Then the <strong style="color:#fff;">Friday Final pays triple</strong> at <code>9 / 6 / 3</code>. One great lap can flip the entire standings right up to the checkered flag.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section class="section" id="gallery" style="background:var(--bg);">
+    <div class="wrap">
+        <div class="center" style="margin-bottom:40px;">
+            <div class="eyebrow">FROM THE FACILITY</div>
+            <h2 class="h2">See It In Action</h2>
+            <p class="lead" style="max-width:640px;margin:14px auto 0;">Sim rigs, big-screen racing, whiteboard lessons, and podium moments from camp.</p>
+        </div>
+        <div class="gallery" id="gallery-out"></div>
+    </div>
+</section>
+
+<!-- ── SIGNUP CTA ── -->
+<section class="signup" id="signup">
+    <div class="signup-glow"></div>
+    <div class="inner">
+        <div class="eyebrow center">SECURE YOUR WEEK</div>
+        <h2>Ready To Race?</h2>
+        <p>Spots are capped at 12 campers per week and they fill fast. Reserve your seat for the week of your choice and start the climb to Camp Champion.</p>
+        <a href="#" id="signup-btn" class="btn btn-lg" target="_blank" rel="noopener">RESERVE YOUR SPOT</a>
+        <div class="sub-note">Questions? Check-in opens 8:45 AM · Arrivals close 9:10 AM · Paramus, NJ</div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="f1">SIM1RACING SUMMER RACING CAMP 2026</div>
+    <div class="f2">Paramus, NJ · Mon–Fri · Ages 7–17 · No Experience Needed<br>Running every week all summer · Maximum 12 campers per week</div>
+    <a href="#signup" class="btn btn-sm btn-outline" style="margin-top:18px;">SIGN UP →</a>
+</footer>
+
+<script>
+/* ════════════════════════════════════════════════════════════════
+   CONFIG — edit these to brand the page
+   ════════════════════════════════════════════════════════════════ */
+// Paste your camp registration link here (a checkout page, form, etc.)
+const SIGNUP_URL = '';
+
+// Photo URLs. Leave any blank to show a labeled placeholder instead.
+const PHOTOS = {
+    hero:     '',   // wide hero shot — sim rigs / a camper racing
+    overview: '',   // a coaching / whiteboard moment
+    gallery:  ['', '', '', '', ''],  // facility, racing, podium, etc.
+};
+
+/* ════════════════════════════════════════════════════════════════
+   CONTENT — the week
+   ════════════════════════════════════════════════════════════════ */
+const DAYS = [
+    {
+        n:'01', day:'Monday', title:'Meet Your Machine', car:'Formula 4',
+        skill:'Controls, Pedals & Completing a Lap',
+        goal:'Every camper can drive a clean lap without going off track.',
+        am:[
+            {t:'9:00–9:20', h:'Welcome & Introductions', d:'Names, where everyone’s from, and have they driven anything before — a kart or a video game? We set a fun, welcoming tone and assign teams.'},
+            {t:'9:20–9:40', h:'Whiteboard: What’s Different About a Race Car?', d:'A family car vs. a Formula 4 on screen — what do you notice? Plus the big question: what exactly is a lap?'},
+            {t:'9:40–9:55', h:'Coach Demo Lap', d:'The coach drives one lap on the big screen, narrating out loud, so kids see what to do before anyone sits down.'},
+            {t:'9:55–11:00', h:'First Simulator Session — Just Drive', d:'No pressure. Complete laps without going off track while the coach walks behind each camper giving live feedback.'},
+            {t:'11:00–11:40', h:'Time Attack — Official Scored Lap', d:'40 minutes on the clock. Your best clean lap is your score. Top 3 earn championship points.'},
+            {t:'11:40–12:00', h:'Racing Basics Kahoot + Wrap-Up', d:'Easy, fun questions — flag colors, famous teams — and a preview of tomorrow.'},
+        ],
+        pm:[
+            {t:'1:00–1:30', h:'Big Screen Prediction Game', d:'Pause an F1 onboard before each corner — what does the driver do here? Builds observation skills.'},
+            {t:'1:30–2:30', h:'Second Sim Session — Get Smoother', d:'One specific thing to work on per camper. Focus on comfort and consistency, not speed.'},
+            {t:'2:30–3:00', h:'Reaction Time Challenge', d:'Head-to-head reaction test on phones, bracket-style. Just for fun — not scored.'},
+            {t:'3:00–4:00', h:'Fun Race + Day 1 Debrief', d:'A casual group race to end the day — a first taste of what Friday’s final will feel like.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Open Sim + Extra Racing', d:'Extension campers get free sim time and bonus race laps — any car, any track.'},
+    },
+    {
+        n:'02', day:'Tuesday', title:'Hit the Brakes', car:'BMW M235i Racing',
+        skill:'When to Brake, Where to Brake, and Why',
+        goal:'Every camper understands that braking happens BEFORE the corner, not during it.',
+        am:[
+            {t:'9:00–9:15', h:'Leaderboard Reveal + Day 2 Intro', d:'Show yesterday’s standings. Today we learn the most important skill in racing — but we don’t reveal it yet.'},
+            {t:'9:15–9:35', h:'Whiteboard: Braking Before the Corner', d:'A car can only do one thing well at a time. We draw a corner and show the braking zone that comes before it.'},
+            {t:'9:35–9:50', h:'Coach Demo: Late vs. Early Braking', d:'The coach drives the same corner two ways — kids call out what they see and discover the difference.'},
+            {t:'9:50–10:50', h:'Simulator Session — BMW M235i', d:'A visual reference point to brake at, the same spot every lap. Groups rotate with immediate feedback.'},
+            {t:'10:50–11:30', h:'Time Attack — Official Scored Lap', d:'40 minutes on the clock. Apply today’s braking lesson and go for your fastest clean lap.'},
+            {t:'11:30–12:00', h:'Crash Analysis on Big Screen', d:'A famous braking mistake — kids guess what went wrong using today’s vocabulary.'},
+        ],
+        pm:[
+            {t:'1:00–2:00', h:'Second Sim Session — Pick Your Own Braking Point', d:'Campers choose their own braking reference; the coach discusses the choices after each run.'},
+            {t:'2:00–2:30', h:'Whiteboard: Why Does the Car Slide?', d:'Brake too hard and the tires lock. We draw it and let the group discover what to do about it.'},
+            {t:'2:30–3:00', h:'Side-by-Side Telemetry', d:'Two campers’ laps compared on the big screen — the group works out who was faster and why.'},
+            {t:'3:00–4:00', h:'Fun Bracket Race + Debrief', d:'Head-to-head bracket racing for fun, with the coach pointing out braking moments live.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Time Attack + Free Sim', d:'Extra time attack for anyone chasing a better Day 2 score, then open sim time.'},
+    },
+    {
+        n:'03', day:'Wednesday', title:'Find the Line', car:'Porsche Boxster S',
+        skill:'The Racing Line + How Car Setup Changes Everything',
+        goal:'Every camper knows what an apex is, can try to hit it, and has felt how a better-set-up car unlocks more speed.',
+        special:'⚡ Today’s Special: The Setup Upgrade — same driver, same track, but fresh tires, less fuel, and tuned suspension. The difference is immediate.',
+        am:[
+            {t:'9:00–9:15', h:'Midweek Standings — Anyone Can Still Win', d:'Today’s lesson makes the biggest difference to lap time. Everyone is still in it.'},
+            {t:'9:15–9:35', h:'Whiteboard: The Fastest Way Around a Corner', d:'Every kid points to the path they’d take — most cut inside. Then we reveal the racing line.'},
+            {t:'9:35–9:50', h:'Coach Demo: Two Lines, Same Corner', d:'Cutting straight across vs. the racing line. Which was faster? The clock shows the answer.'},
+            {t:'9:50–10:40', h:'Simulator Session — Basic Setup', d:'Go wide, touch the inside curb, let the car drift back out. On a heavy fuel load with standard tires.'},
+            {t:'10:40–11:10', h:'⚡ Setup Upgrade — Same Car, Same Track', d:'Fresh tires, reduced fuel, optimized suspension. Campers feel the difference immediately and discuss what changed.'},
+            {t:'11:10–12:00', h:'Time Attack — Official Scored Lap', d:'50 minutes on the clock — the most of any day. Line, braking points, and a properly set-up car all together.'},
+        ],
+        pm:[
+            {t:'1:00–1:30', h:'Racing Line Kahoot', d:'Where’s the apex of this corner? True or false: cutting inside is always fastest? Standings update after.'},
+            {t:'1:30–2:30', h:'Second Sim Session — Wet Conditions', d:'Switch to rain. The racing line is slippery when wet — campers discover it by feel, not by being told.'},
+            {t:'2:30–3:00', h:'Big Screen: Spot the Line', d:'Pause famous onboard footage mid-corner — is the driver on the right line? Kids answer using today’s lesson.'},
+            {t:'3:00–3:30', h:'Wet vs. Dry Lap Challenge', d:'Unlimited laps in each condition — who adapts fastest? For fun, and always gets a reaction.'},
+            {t:'3:30–4:00', h:'Fun Bracket Race + Debrief', d:'1v1 races on dry track with live commentary. Preview: tomorrow is the hardest car of the week.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Setup Experiment + Free Sim', d:'Extension campers try more setup variations — even softer tires? less wing? — and experiment freely.'},
+    },
+    {
+        n:'04', day:'Thursday', title:'Take Control', car:'Mazda MX-5 Cup',
+        skill:'Manual Gears — When to Shift and Why',
+        goal:'Every camper has driven a manual car. Even one clean shift is a win.',
+        points:'Double Points',
+        am:[
+            {t:'9:00–9:15', h:'Double Points Announcement + Standings', d:'Today everything is worth double. Anyone can jump to the top — we reveal the standings slowly to build the drama.'},
+            {t:'9:15–9:35', h:'Whiteboard: A Bike With Gears', d:'Every kid knows bikes. Low gear = easier, slower; high gear = harder, faster. Cars work the same way.'},
+            {t:'9:35–9:50', h:'Coach Demo: Manual Driving', d:'“I’m pressing the clutch… shifting to 2nd… releasing slowly.” Stalling is normal — every driver has done it.'},
+            {t:'9:50–10:50', h:'Simulator Session — MX-5 Cup (Manual)', d:'Coach stays close for first-timers. A stall counter goes on the whiteboard as a group joke — stalling becomes funny, not embarrassing.'},
+            {t:'10:50–11:20', h:'Famous Stalling Moments in Racing', d:'Watch real race drivers stall out — why it happened and how they were penalized. Normalizes the challenge.'},
+            {t:'11:20–12:00', h:'Time Attack — Double Points', d:'40 minutes on the clock, worth double: 6 / 4 / 2 for the top 3. One great lap can flip the leaderboard.'},
+        ],
+        pm:[
+            {t:'1:00–1:30', h:'Stall Wall Reveal + Friday Preview', d:'Count up the stall tally together — celebratory, not shameful. Tomorrow is the fastest car of the week.'},
+            {t:'1:30–2:00', h:'Blindfolded Gear Sequence', d:'Find N → 1 → 2 → 3 → 4 by feel only, timed, with the crowd cheering. Just for fun.'},
+            {t:'2:00–3:00', h:'Second Sim Session — Combine All Skills', d:'Brake here, downshift, hit the apex, shift up on exit — the first taste of everything working together.'},
+            {t:'3:00–3:30', h:'Shift Point Review', d:'Pause one camper’s lap at every shift — good shift or too early/late? Individual coaching becomes a group moment.'},
+            {t:'3:30–4:00', h:'Fun Bracket Race + Championship Preview', d:'Head-to-head in the MX-5 for fun. The coach reveals standings and explains Friday’s format.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Free Sim + Manual Practice', d:'Extra open sim time focused on gear shifts — a relaxed setting to get more reps with the clutch.'},
+    },
+    {
+        n:'05', day:'Friday', title:'Race Day — Championship', car:'Lamborghini Huracán GT3',
+        skill:'Putting It All Together',
+        goal:'Everything learned this week comes together in one final race.',
+        points:'Triple Points Final',
+        am:[
+            {t:'9:00–9:15', h:'Full Week Standings Reveal', d:'Revealed from last place up to first. The final race is worth triple points — anything can still happen.'},
+            {t:'9:15–9:40', h:'Whiteboard: Wait — Isn’t That a Lamborghini?', d:'A GT3 is built on the street Huracán but turned into a race car. What would you change to make a road car faster?'},
+            {t:'9:40–10:30', h:'Practice — Taming the Raging Bull', d:'First laps in the GT3, getting a feel for what separates it from every other car this week.'},
+            {t:'10:30–11:15', h:'Qualifying — Sets the Grid', d:'45 minutes on the clock. Your fastest clean lap sets your starting position for the Final Race.'},
+            {t:'11:15–12:00', h:'Week Recap Kahoot', d:'Ten questions — two from each day. The winner earns a bonus point going into the final.'},
+        ],
+        pm:[
+            {t:'1:00–1:45', h:'THE FINAL RACE — Camp Championship', d:'Full grid, rolling start, 15 laps in the Lamborghini Huracán GT3 — all on the big screen with live coach commentary. 9 / 6 / 3 points.'},
+            {t:'1:45–2:15', h:'Awards Ceremony + Certificates', d:'Camp Champion and Most Improved announced. Every camper gets a certificate and a personal shoutout. Podium photos at the sims.'},
+            {t:'2:15–3:15', h:'Free Sim Session', d:'No coaching, no pressure — campers pick whatever they want from the week. Celebration time.'},
+            {t:'3:15–3:45', h:'Which Car Was Your Favorite?', d:'Every camper gives their ranking and why, and the coach ties each car back to its lesson.'},
+            {t:'3:45–4:00', h:'Podium Photos + Camp Send-Off', d:'Photos for the champion and all award winners — a strong emotional close for parents.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Post-Championship Celebration Racing', d:'Extension campers enjoy open sim time after the ceremony — a great chance for parents to see the sims at pickup.'},
+    },
+];
+
+const CHAMP = [
+    {d:'Day 1 · Mon', fmt:'Time Attack — best clean lap counts', sub:'Formula 4', time:'40 min', pts:'3 / 2 / 1'},
+    {d:'Day 2 · Tue', fmt:'Time Attack — best clean lap counts', sub:'BMW M235i Racing', time:'40 min', pts:'3 / 2 / 1'},
+    {d:'Day 3 · Wed', fmt:'Time Attack — best clean lap counts', sub:'Porsche Boxster S', time:'50 min', pts:'3 / 2 / 1'},
+    {d:'Day 4 · Thu', fmt:'Time Attack — best clean lap counts', sub:'Mazda MX-5 Cup', time:'40 min', pts:'6 / 4 / 2', cls:'dbl', pill:'<span class="pill gold">Double</span>'},
+    {d:'Day 5 · Fri', fmt:'Qualifying — best lap sets the race grid', sub:'Lamborghini Huracán GT3', time:'45 min', pts:'Grid only'},
+    {d:'Final', fmt:'15-lap Final Race — rolling start', sub:'Lamborghini Huracán GT3', time:'~30 min', pts:'9 / 6 / 3', cls:'fin', pill:'<span class="pill red">Triple</span>'},
+];
+
+/* ════════════════════════════════════════════════════════════════
+   RENDER
+   ════════════════════════════════════════════════════════════════ */
+function photoPlaceholder(icon, title, sub){
+    return `<div class="ph"><div class="ph-glow"></div>
+        <div class="ph-ico">${icon}</div>
+        <div class="ph-t">${title}</div>
+        <div class="ph-s">${sub}</div></div>`;
+}
+function fillPhoto(el, url, icon, title, sub, alt){
+    if(!el) return;
+    el.innerHTML = url ? `<img src="${url}" alt="${alt}">` : photoPlaceholder(icon, title, sub);
+}
+
+function renderPhotos(){
+    fillPhoto(document.getElementById('hero-photo'), PHOTOS.hero,
+        '🏁', 'Hero Photo', 'Set PHOTOS.hero to a wide shot of the sim rigs or a camper racing.', 'SIM1Racing Summer Camp');
+    fillPhoto(document.getElementById('overview-photo'), PHOTOS.overview,
+        '📸', 'Coaching Photo', 'Set PHOTOS.overview to a whiteboard or coaching moment.', 'Camp coaching session');
+    const labels = ['Sim Rigs', 'On Track', 'Whiteboard', 'Big Screen', 'Podium'];
+    document.getElementById('gallery-out').innerHTML = (PHOTOS.gallery || []).map((url, i) => {
+        const wide = i === 0 ? ' wide' : '';
+        const inner = url
+            ? `<img src="${url}" alt="Camp photo ${i+1}">`
+            : photoPlaceholder('📷', labels[i] || 'Photo', 'Add a URL to PHOTOS.gallery to fill this slot.');
+        return `<div class="car-photo${wide}">${inner}</div>`;
+    }).join('');
+}
+
+function renderSkillCards(){
+    document.getElementById('skill-cards').innerHTML = DAYS.map(day => `
+        <div class="week-card"><div class="bar"></div>
+            <div class="num">${day.n}</div>
+            <div class="wk">${day.day}</div>
+            <div class="dt">${day.title}</div>
+            <div class="car">${day.car}</div>
+            <div class="meta">${day.skill}</div>
+            ${day.points ? `<div class="pts">${day.points}</div>` : ''}
+        </div>`).join('');
+}
+
+function timeline(rows){
+    return `<div class="tl">${rows.map(r => `
+        <div class="tl-row">
+            <div class="tl-time">${r.t}</div>
+            <div class="tl-act"><div class="ta-t">${r.h}</div><div class="ta-d">${r.d}</div></div>
+        </div>`).join('')}</div>`;
+}
+
+function renderDays(){
+    document.getElementById('days-out').innerHTML = DAYS.map((day, i) => `
+        <div class="day" id="day-${i}">
+            <div class="day-head" onclick="toggleDay(${i})">
+                <div class="dnum">${day.n}</div>
+                <div class="dmain">
+                    <div class="dtitle">${day.day} · ${day.title}</div>
+                    <div class="dsub"><b>${day.car}</b> — ${day.skill}</div>
+                </div>
+                <div class="dchev">▾</div>
+            </div>
+            <div class="day-body">
+                <div class="day-goal"><b>Goal —</b> ${day.goal}</div>
+                ${day.special ? `<div class="note" style="margin:0 0 20px;"><p>${day.special}</p></div>` : ''}
+                <div class="tl-label am">Half Day · 9:00 AM – 12:00 PM</div>
+                ${timeline(day.am)}
+                <div class="day-pickup">Half Day Ends · 12:00 PM Pickup · Lunch 12–1 PM (Full Day)</div>
+                <div class="tl-label pm">Full Day Continues · 1:00 – 4:00 PM</div>
+                ${timeline(day.pm)}
+                <div class="tl-label ext">Optional Extension · 4:00 – 5:00 PM</div>
+                ${timeline([day.ext])}
+            </div>
+        </div>`).join('');
+}
+
+function toggleDay(i){
+    document.getElementById('day-'+i).classList.toggle('open');
+}
+
+function renderChamp(){
+    document.getElementById('champ-rows').innerHTML = CHAMP.map(r => `
+        <tr class="${r.cls||''}">
+            <td class="d-tag">${r.d}</td>
+            <td class="fmt">${r.fmt}${r.pill||''}<small>${r.sub}</small></td>
+            <td class="col-c">${r.time}</td>
+            <td class="col-c pts">${r.pts}</td>
+        </tr>`).join('');
+}
+
+function renderSignup(){
+    const href = SIGNUP_URL || '#';
+    document.getElementById('signup-btn').setAttribute('href', href);
+}
+
+/* INIT */
+renderPhotos();
+renderSkillCards();
+renderDays();
+renderChamp();
+renderSignup();
+</script>
+</body>
+</html>
