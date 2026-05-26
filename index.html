@@ -164,10 +164,17 @@ tbody tr:last-child td{border-bottom:none;}
 .signup p{font-family:var(--body);font-size:1.1em;color:#b0b0b0;line-height:1.6;margin:18px 0 30px;}
 .signup .sub-note{font-family:var(--body);font-size:0.85em;color:#666;margin-top:18px;}
 
-/* ── FOOTER ── */
-.footer{padding:44px 40px;background:var(--bg2);border-top:1px solid var(--border);text-align:center;}
-.footer .f1{font-family:var(--cond);font-weight:900;text-transform:uppercase;letter-spacing:1px;color:#fff;font-size:1.1em;}
-.footer .f2{font-family:var(--body);font-size:0.8em;color:#555;margin-top:8px;line-height:1.6;}
+/* ── CHAMPIONSHIP — compact to fit one screen ── */
+#championship{padding-top:52px;padding-bottom:52px;}
+#championship .champ-wrap thead th{padding:10px 20px;}
+#championship .champ-wrap tbody td{padding:9px 20px;}
+#championship .champ-wrap .fmt small{margin-top:1px;}
+#championship .award-grid{margin-top:14px;gap:14px;}
+#championship .award{padding:16px 20px;}
+#championship .award .aw-t{font-size:1.1em;}
+#championship .award .aw-d{font-size:0.85em;margin-top:5px;}
+#championship .note{padding:15px 20px;margin-top:14px;}
+#championship .note p{font-size:0.86em;}
 
 @media(max-width:900px){
     .hero-inner,.ov-grid,.price-grid,.award-grid{grid-template-columns:1fr;}
@@ -241,11 +248,11 @@ tbody tr:last-child td{border-bottom:none;}
         <div class="ov-grid">
             <div class="ov-text">
                 <div class="eyebrow">PROGRAM OVERVIEW</div>
-                <h2 class="h2" style="margin-bottom:20px;">Five Dream Cars, One Epic Week</h2>
+                <h2 class="h2" style="margin-bottom:20px;">Five Race Cars, One Epic Week</h2>
                 <p>Every day you climb into a different machine and learn the one skill that unlocks it. By Friday you've gone from your very first lap to racing a Lamborghini Huracán GT3 wheel-to-wheel against the rest of the camp.</p>
                 <p>A fresh group runs <strong style="color:#ddd;">every week all summer long</strong>, capped at 12 campers — so every kid gets plenty of real coaching, seat time, and racing.</p>
                 <ul class="ov-feats">
-                    <li>Drive 5 different race cars — a new dream machine every day</li>
+                    <li>Drive 5 different race cars — a new machine every day</li>
                     <li>Go head-to-head against other campers for championship points</li>
                     <li>A live leaderboard, daily drama, and a Friday championship final</li>
                     <li>Awards ceremony with a printed certificate to take home</li>
@@ -275,7 +282,7 @@ tbody tr:last-child td{border-bottom:none;}
     <div class="wrap">
         <div class="center" style="margin-bottom:40px;">
             <div class="eyebrow">SKILL PROGRESSION</div>
-            <h2 class="h2">A New Dream Car Every Day</h2>
+            <h2 class="h2">A New Race Car Every Day</h2>
             <p class="lead" style="max-width:720px;margin:14px auto 0;">Five days, five very different cars. Each day you master the one skill that car is built to teach — then put it on the line racing the other campers.</p>
         </div>
         <div class="week-grid" id="skill-cards"></div>
@@ -354,10 +361,10 @@ tbody tr:last-child td{border-bottom:none;}
 <!-- ── CHAMPIONSHIP ── -->
 <section class="section" id="championship" style="background:var(--bg2);">
     <div class="wrap-md">
-        <div class="center" style="margin-bottom:36px;">
+        <div class="center" style="margin-bottom:26px;">
             <div class="eyebrow">THE CHAMPIONSHIP SYSTEM</div>
             <h2 class="h2">Race For The Title</h2>
-            <p class="lead" style="max-width:720px;margin:14px auto 0;">Every camper takes on the same challenge each day — a Time Attack. Rip as many laps as you want; your fastest clean lap earns points toward the title. Standings go up every morning, so the rivalry builds all week long.</p>
+            <p class="lead" style="max-width:680px;margin:12px auto 0;">Same challenge every day — a Time Attack. Your fastest clean lap earns points toward the title, and standings go up each morning.</p>
         </div>
 
         <div class="champ-wrap">
@@ -374,17 +381,17 @@ tbody tr:last-child td{border-bottom:none;}
         <div class="award-grid">
             <div class="award">
                 <div class="aw-t"><span class="em">🏆</span>Camp Champion</div>
-                <div class="aw-d">Highest total points across the four daily Time Attacks plus the Final Race result.</div>
+                <div class="aw-d">Highest total points across the four daily Time Attacks plus the Final Race.</div>
             </div>
             <div class="award">
                 <div class="aw-t"><span class="em">📈</span>Most Improved</div>
-                <div class="aw-d">Biggest lap-time drop from Day 1 to Day 5 — so every camper has a trophy to chase, not just the fastest kid.</div>
+                <div class="aw-d">Biggest lap-time drop from Day 1 to Day 5 — a trophy for every camper to chase.</div>
             </div>
         </div>
 
         <div class="note">
             <div class="nt-t">⚡ No Lead Is Safe</div>
-            <p><strong style="color:#fff;">Thursday is Double Points</strong> — the Day 4 Time Attack pays <code>6 / 4 / 2</code> instead of the usual 3 / 2 / 1. Then the <strong style="color:#fff;">Friday Final pays triple</strong> at <code>9 / 6 / 3</code>. One great lap can flip the entire standings right up to the checkered flag.</p>
+            <p><strong style="color:#fff;">Thursday pays double</strong> (<code>6 / 4 / 2</code>) and the <strong style="color:#fff;">Friday Final pays triple</strong> (<code>9 / 6 / 3</code>) — one great lap can flip the standings right up to the checkered flag.</p>
         </div>
     </div>
 </section>
@@ -412,12 +419,6 @@ tbody tr:last-child td{border-bottom:none;}
         <div class="sub-note">No payment now — just the form. Your spot is confirmed once the invoice is paid. · Paramus, NJ</div>
     </div>
 </section>
-
-<footer class="footer">
-    <div class="f1">SIM1RACING SUMMER RACING CAMP 2026</div>
-    <div class="f2">Paramus, NJ · Mon–Fri · Ages 7–17 · No Experience Needed<br>Running every week all summer · Maximum 12 campers per week</div>
-    <a href="#signup" class="btn btn-sm btn-outline" style="margin-top:18px;">SIGN UP →</a>
-</footer>
 
 <script>
 /* ════════════════════════════════════════════════════════════════
