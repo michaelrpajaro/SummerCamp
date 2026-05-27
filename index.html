@@ -90,12 +90,6 @@ h1,h2,h3{margin:0;}
 .week-card .meta{font-family:var(--body);font-size:0.85em;color:#999;margin-top:6px;line-height:1.45;}
 .week-card .pts{display:inline-block;margin-top:13px;font-family:var(--cond);font-size:0.7em;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold);background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.3);border-radius:6px;padding:3px 9px;}
 
-/* ── REQUEST MORE INFO ── */
-.info-card{position:relative;overflow:hidden;background:linear-gradient(160deg,#160606,var(--card2) 60%);border:1px solid rgba(239,68,68,0.3);border-radius:18px;padding:60px 40px;text-align:center;}
-.info-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(239,68,68,0.18),transparent 65%);pointer-events:none;}
-.info-inner{position:relative;z-index:1;}
-.info-sub{font-family:var(--body);font-size:0.85em;color:#666;margin-top:18px;}
-
 /* ── DAY-BY-DAY ACCORDION ── */
 .days{display:flex;flex-direction:column;gap:12px;}
 .day{background:var(--card2);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
@@ -163,32 +157,6 @@ h1,h2,h3{margin:0;}
 .bonus .btxt .bt-t{font-family:var(--cond);font-size:1.25em;font-weight:900;text-transform:uppercase;color:var(--gold);}
 .bonus .btxt .bt-d{font-family:var(--body);font-size:0.92em;color:#cfcfcf;line-height:1.6;margin-top:5px;}
 
-/* ── CHAMPIONSHIP TABLE ── */
-.champ-wrap{background:var(--card2);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
-.tbl-scroll{overflow-x:auto;}
-table{width:100%;border-collapse:collapse;}
-.champ-wrap table{min-width:560px;}
-thead th{font-family:var(--body);font-size:0.78em;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#888;text-align:left;padding:15px 22px;border-bottom:1px solid var(--border);background:var(--card3);}
-tbody td{padding:15px 22px;border-bottom:1px solid var(--border2);font-family:var(--body);font-size:0.96em;color:#ccc;vertical-align:middle;}
-tbody tr:last-child td{border-bottom:none;}
-.champ-wrap .d-tag{font-family:var(--cond);font-weight:900;color:var(--red);font-size:1.05em;}
-.champ-wrap .fmt{color:#e5e5e5;font-weight:600;}
-.champ-wrap .fmt small{display:block;color:#888;font-weight:400;font-size:0.85em;margin-top:2px;}
-.champ-wrap .pts{font-family:var(--cond);font-weight:900;font-size:1.1em;color:#fff;}
-.champ-wrap tr.dbl .pts{color:var(--gold);}
-.champ-wrap tr.fin{background:linear-gradient(90deg,rgba(239,68,68,0.08),transparent);}
-.champ-wrap tr.fin .pts{color:var(--red);}
-.col-c{text-align:center;}
-.pill{display:inline-block;font-family:var(--cond);font-size:0.62em;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-radius:5px;padding:2px 7px;margin-left:8px;vertical-align:middle;}
-.pill.gold{color:var(--gold);background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.35);}
-.pill.red{color:var(--red);background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35);}
-
-.award-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;}
-.award{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:24px;}
-.award .aw-t{font-family:var(--cond);font-size:1.3em;font-weight:900;text-transform:uppercase;color:#fff;}
-.award .aw-t .em{margin-right:8px;}
-.award .aw-d{font-family:var(--body);font-size:0.9em;color:#999;line-height:1.6;margin-top:8px;}
-
 /* ── GALLERY ── */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
 .gallery .car-photo{aspect-ratio:4/3;}
@@ -202,20 +170,8 @@ tbody tr:last-child td{border-bottom:none;}
 .signup p{font-family:var(--body);font-size:1.1em;color:#b0b0b0;line-height:1.6;margin:18px 0 30px;}
 .signup .sub-note{font-family:var(--body);font-size:0.85em;color:#666;margin-top:18px;}
 
-/* ── CHAMPIONSHIP — compact to fit one screen ── */
-#championship{padding-top:52px;padding-bottom:52px;}
-#championship .champ-wrap thead th{padding:10px 20px;}
-#championship .champ-wrap tbody td{padding:9px 20px;}
-#championship .champ-wrap .fmt small{margin-top:1px;}
-#championship .award-grid{margin-top:14px;gap:14px;}
-#championship .award{padding:16px 20px;}
-#championship .award .aw-t{font-size:1.1em;}
-#championship .award .aw-d{font-size:0.85em;margin-top:5px;}
-#championship .note{padding:15px 20px;margin-top:14px;}
-#championship .note p{font-size:0.86em;}
-
 @media(max-width:900px){
-    .hero-inner,.ov-grid,.price-grid,.award-grid{grid-template-columns:1fr;}
+    .hero-inner,.ov-grid,.price-grid{grid-template-columns:1fr;}
     .hero h1{font-size:3.4em;}
     .week-grid{grid-template-columns:repeat(2,1fr);}
     .hero-stats{grid-template-columns:repeat(4,1fr);}
@@ -275,9 +231,6 @@ tbody tr:last-child td{border-bottom:none;}
     .tl-act .ta-t{font-size:0.92em;}
     .tl-act .ta-d{font-size:0.82em;}
 
-    /* request info */
-    .info-card{padding:32px 18px;}
-
     /* pricing */
     .price-grid{gap:16px;}
     .price-card{padding:22px 20px;}
@@ -311,7 +264,6 @@ tbody tr:last-child td{border-bottom:none;}
         <a href="#skills">The Week</a>
         <a href="#schedule">Day by Day</a>
         <a href="#pricing">Pricing</a>
-        <a href="#championship">Championship</a>
         <a href="#signup" class="nav-cta">Sign Up</a>
     </div>
 </div></nav>
@@ -401,24 +353,8 @@ tbody tr:last-child td{border-bottom:none;}
     </div>
 </section>
 
-<!-- ── REQUEST MORE INFO ── -->
-<section class="section" id="info" style="background:var(--bg);">
-    <div class="wrap-md">
-        <div class="info-card">
-            <div class="info-glow"></div>
-            <div class="info-inner">
-                <div class="eyebrow">WANT THE FULL BREAKDOWN?</div>
-                <h2 class="h2">Request More Info</h2>
-                <p class="lead" style="max-width:640px;margin:14px auto 26px;">Still have questions about the cars, pricing, or which week is the best fit? Tap below and we’ll email you back — usually within a day.</p>
-                <a href="#" id="info-btn" class="btn btn-lg">REQUEST MORE INFO</a>
-                <div class="info-sub">Opens your email with a message to <strong style="color:#bbb;">info@sim1racing.com</strong> ready to send.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- ── PRICING ── -->
-<section class="section" id="pricing" style="background:var(--bg2);">
+<section class="section" id="pricing" style="background:var(--bg);">
     <div class="wrap">
         <div class="center" style="margin-bottom:44px;">
             <div class="eyebrow">REGISTRATION</div>
@@ -487,44 +423,6 @@ tbody tr:last-child td{border-bottom:none;}
     </div>
 </section>
 
-<!-- ── CHAMPIONSHIP ── -->
-<section class="section" id="championship" style="background:var(--bg);">
-    <div class="wrap-md">
-        <div class="center" style="margin-bottom:26px;">
-            <div class="eyebrow">THE CHAMPIONSHIP SYSTEM</div>
-            <h2 class="h2">Race For The Title</h2>
-            <p class="lead" style="max-width:680px;margin:12px auto 0;">Same challenge every day — a Time Attack. Your fastest clean lap earns points toward the title, and standings go up each morning.</p>
-        </div>
-
-        <div class="champ-wrap">
-            <div class="tbl-scroll">
-                <table>
-                    <thead><tr>
-                        <th>Day</th><th>Competition Format</th><th class="col-c">Time</th><th class="col-c">Points</th>
-                    </tr></thead>
-                    <tbody id="champ-rows"></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="award-grid">
-            <div class="award">
-                <div class="aw-t"><span class="em">🏆</span>Camp Champion</div>
-                <div class="aw-d">Highest total points across the four daily Time Attacks plus the Final Race.</div>
-            </div>
-            <div class="award">
-                <div class="aw-t"><span class="em">📈</span>Most Improved</div>
-                <div class="aw-d">Biggest lap-time drop from Day 1 to Day 5 — a trophy for every camper to chase.</div>
-            </div>
-        </div>
-
-        <div class="note">
-            <div class="nt-t">⚡ No Lead Is Safe</div>
-            <p><strong style="color:#fff;">Thursday pays double</strong> (<code>6 / 4 / 2</code>) and the <strong style="color:#fff;">Friday Final pays triple</strong> (<code>9 / 6 / 3</code>) — one great lap can flip the standings right up to the checkered flag.</p>
-        </div>
-    </div>
-</section>
-
 <!-- ── GALLERY ── -->
 <section class="section" id="gallery" style="background:var(--bg2);">
     <div class="wrap">
@@ -555,22 +453,6 @@ tbody tr:last-child td{border-bottom:none;}
    ════════════════════════════════════════════════════════════════ */
 // Paste your camp registration link here (a checkout page, form, etc.)
 const SIGNUP_URL = 'https://forms.gle/9qbwVwXE8WU5vmAn6';
-
-// "Request More Info" opens the visitor's email app pre-addressed to this
-// inbox with the subject + body below already filled in (they just hit send).
-const INFO_EMAIL = 'info@sim1racing.com';
-const INFO_SUBJECT = 'Summer Racing Camp 2026 — More Info Request';
-const INFO_BODY = `Hi SIM1Racing team,
-
-I'd like more information about the 2026 Summer Racing Camp. Please send me the full details, including the daily lesson plan, available weeks, and how to register.
-
-A few details to help you reply:
-- Camper name & age:
-- Preferred week(s):
-- Half day or full day:
-- Anything else you'd like us to know:
-
-Thanks!`;
 
 // Photo URLs. Leave any blank to show a labeled placeholder instead.
 const PHOTOS = {
@@ -696,15 +578,6 @@ const DAYS = [
     },
 ];
 
-const CHAMP = [
-    {d:'Day 1 · Mon', fmt:'Time Attack — best clean lap counts', sub:'Formula 4', time:'40 min', pts:'3 / 2 / 1'},
-    {d:'Day 2 · Tue', fmt:'Time Attack — best clean lap counts', sub:'BMW M235i Racing', time:'40 min', pts:'3 / 2 / 1'},
-    {d:'Day 3 · Wed', fmt:'Time Attack — best clean lap counts', sub:'Porsche Boxster S', time:'50 min', pts:'3 / 2 / 1'},
-    {d:'Day 4 · Thu', fmt:'Time Attack — best clean lap counts', sub:'Mazda MX-5 Cup', time:'40 min', pts:'6 / 4 / 2', cls:'dbl', pill:'<span class="pill gold">Double</span>'},
-    {d:'Day 5 · Fri', fmt:'Qualifying — best lap sets the race grid', sub:'Lamborghini Huracán GT3', time:'45 min', pts:'Grid only'},
-    {d:'Final', fmt:'15-lap Final Race — rolling start', sub:'Lamborghini Huracán GT3', time:'~30 min', pts:'9 / 6 / 3', cls:'fin', pill:'<span class="pill red">Triple</span>'},
-];
-
 /* ════════════════════════════════════════════════════════════════
    RENDER
    ════════════════════════════════════════════════════════════════ */
@@ -745,13 +618,6 @@ function renderSkillCards(){
         </div>`).join('');
 }
 
-function renderInfo(){
-    const mailto = `mailto:${INFO_EMAIL}`
-        + `?subject=${encodeURIComponent(INFO_SUBJECT)}`
-        + `&body=${encodeURIComponent(INFO_BODY)}`;
-    document.getElementById('info-btn').setAttribute('href', mailto);
-}
-
 function timeline(rows){
     return `<div class="tl">${rows.map(r => `
         <div class="tl-row">
@@ -789,16 +655,6 @@ function toggleDay(i){
     document.getElementById('day-'+i).classList.toggle('open');
 }
 
-function renderChamp(){
-    document.getElementById('champ-rows').innerHTML = CHAMP.map(r => `
-        <tr class="${r.cls||''}">
-            <td class="d-tag">${r.d}</td>
-            <td class="fmt">${r.fmt}${r.pill||''}<small>${r.sub}</small></td>
-            <td class="col-c">${r.time}</td>
-            <td class="col-c pts">${r.pts}</td>
-        </tr>`).join('');
-}
-
 function renderSignup(){
     const href = SIGNUP_URL || '#';
     document.getElementById('signup-btn').setAttribute('href', href);
@@ -808,8 +664,6 @@ function renderSignup(){
 renderPhotos();
 renderSkillCards();
 renderDays();
-renderInfo();
-renderChamp();
 renderSignup();
 </script>
 </body>
