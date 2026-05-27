@@ -96,6 +96,35 @@ h1,h2,h3{margin:0;}
 .info-inner{position:relative;z-index:1;}
 .info-sub{font-family:var(--body);font-size:0.85em;color:#666;margin-top:18px;}
 
+/* ── DAY-BY-DAY ACCORDION ── */
+.days{display:flex;flex-direction:column;gap:12px;}
+.day{background:var(--card2);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.day-head{display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer;user-select:none;transition:background .15s;}
+.day-head:hover{background:#161616;}
+.day-head .dnum{font-family:var(--cond);font-size:1.5em;font-weight:900;color:var(--red);min-width:44px;line-height:1;}
+.day-head .dmain{flex:1;min-width:0;}
+.day-head .dtitle{font-family:var(--cond);font-size:1.45em;font-weight:900;text-transform:uppercase;color:#fff;line-height:1.05;}
+.day-head .dsub{font-family:var(--body);font-size:0.9em;color:#999;margin-top:3px;}
+.day-head .dsub b{color:#ddd;font-weight:700;}
+.day-head .dchev{font-family:var(--cond);color:#666;font-size:1.4em;transition:transform .2s;flex-shrink:0;}
+.day.open .dchev{transform:rotate(180deg);}
+.day-body{display:none;padding:0 24px 24px;}
+.day.open .day-body{display:block;}
+.day-goal{font-family:var(--body);font-size:0.92em;color:#bbb;line-height:1.6;background:var(--card3);border:1px solid var(--border2);border-left:3px solid var(--red);border-radius:8px;padding:14px 16px;margin-bottom:20px;}
+.day-goal b{color:var(--red);font-family:var(--cond);font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:0.85em;}
+.tl-label{font-family:var(--cond);font-size:0.78em;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#777;margin:18px 0 12px;border-bottom:1px solid var(--border2);padding-bottom:7px;}
+.tl-label.am{color:var(--blue);}
+.tl-label.pm{color:var(--gold);}
+.tl-label.ext{color:var(--green);}
+.tl{display:flex;flex-direction:column;gap:2px;}
+.tl-row{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--border2);}
+.tl-row:last-child{border-bottom:none;}
+.tl-time{font-family:var(--body);font-size:0.85em;font-weight:700;color:#888;white-space:nowrap;}
+.tl-act .ta-t{font-family:var(--body);font-size:0.98em;font-weight:700;color:#fff;}
+.tl-act .ta-t .star{color:var(--gold);}
+.tl-act .ta-d{font-family:var(--body);font-size:0.86em;color:#999;line-height:1.5;margin-top:3px;}
+.day-pickup{font-family:var(--cond);font-size:0.78em;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#777;text-align:center;padding:10px;margin:6px 0;border-top:1px dashed var(--border3);border-bottom:1px dashed var(--border3);}
+
 /* ── PRICING ── */
 .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
 .price-card{background:var(--card2);border:1px solid var(--border);border-radius:16px;padding:30px 28px;position:relative;}
@@ -226,6 +255,17 @@ tbody tr:last-child td{border-bottom:none;}
     .week-card .car{font-size:0.9em;margin-top:9px;}
     .week-card .meta{font-size:0.8em;}
 
+    /* day-by-day accordion */
+    .day-head{padding:15px 16px;gap:12px;}
+    .day-head .dnum{font-size:1.25em;min-width:30px;}
+    .day-head .dtitle{font-size:1.08em;}
+    .day-head .dsub{font-size:0.82em;}
+    .day-body{padding:0 16px 18px;}
+    .tl-row{grid-template-columns:1fr;gap:2px;padding:9px 0;}
+    .tl-time{font-size:0.78em;}
+    .tl-act .ta-t{font-size:0.92em;}
+    .tl-act .ta-d{font-size:0.82em;}
+
     /* request info */
     .info-card{padding:32px 18px;}
 
@@ -256,6 +296,7 @@ tbody tr:last-child td{border-bottom:none;}
     <div class="nav-links">
         <a href="#overview">Overview</a>
         <a href="#skills">The Week</a>
+        <a href="#schedule">Day by Day</a>
         <a href="#pricing">Pricing</a>
         <a href="#championship">Championship</a>
         <a href="#signup" class="nav-cta">Sign Up</a>
@@ -335,15 +376,27 @@ tbody tr:last-child td{border-bottom:none;}
     </div>
 </section>
 
+<!-- ── DAY BY DAY ── -->
+<section class="section" id="schedule" style="background:var(--bg2);">
+    <div class="wrap-md">
+        <div class="center" style="margin-bottom:40px;">
+            <div class="eyebrow">A LOOK INSIDE THE WEEK</div>
+            <h2 class="h2">Day By Day</h2>
+            <p class="lead" style="max-width:720px;margin:14px auto 0;">Tap any day to see the full schedule — morning half-day, afternoon full-day, and the optional evening extension.</p>
+        </div>
+        <div class="days" id="days-out"></div>
+    </div>
+</section>
+
 <!-- ── REQUEST MORE INFO ── -->
-<section class="section" id="info" style="background:var(--bg2);">
+<section class="section" id="info" style="background:var(--bg);">
     <div class="wrap-md">
         <div class="info-card">
             <div class="info-glow"></div>
             <div class="info-inner">
                 <div class="eyebrow">WANT THE FULL BREAKDOWN?</div>
                 <h2 class="h2">Request More Info</h2>
-                <p class="lead" style="max-width:640px;margin:14px auto 26px;">Want to know more about the cars, what a day looks like, or which week is the best fit? Tap below and we’ll email you the full details — usually within a day.</p>
+                <p class="lead" style="max-width:640px;margin:14px auto 26px;">Still have questions about the cars, pricing, or which week is the best fit? Tap below and we’ll email you back — usually within a day.</p>
                 <a href="#" id="info-btn" class="btn btn-lg">REQUEST MORE INFO</a>
                 <div class="info-sub">Opens your email with a message to <strong style="color:#bbb;">info@sim1racing.com</strong> ready to send.</div>
             </div>
@@ -352,7 +405,7 @@ tbody tr:last-child td{border-bottom:none;}
 </section>
 
 <!-- ── PRICING ── -->
-<section class="section" id="pricing" style="background:var(--bg);">
+<section class="section" id="pricing" style="background:var(--bg2);">
     <div class="wrap">
         <div class="center" style="margin-bottom:44px;">
             <div class="eyebrow">REGISTRATION</div>
@@ -405,7 +458,7 @@ tbody tr:last-child td{border-bottom:none;}
 </section>
 
 <!-- ── CHAMPIONSHIP ── -->
-<section class="section" id="championship" style="background:var(--bg2);">
+<section class="section" id="championship" style="background:var(--bg);">
     <div class="wrap-md">
         <div class="center" style="margin-bottom:26px;">
             <div class="eyebrow">THE CHAMPIONSHIP SYSTEM</div>
@@ -443,7 +496,7 @@ tbody tr:last-child td{border-bottom:none;}
 </section>
 
 <!-- ── GALLERY ── -->
-<section class="section" id="gallery" style="background:var(--bg);">
+<section class="section" id="gallery" style="background:var(--bg2);">
     <div class="wrap">
         <div class="center" style="margin-bottom:40px;">
             <div class="eyebrow">FROM THE FACILITY</div>
@@ -506,11 +559,111 @@ const PHOTOS = {
    CONTENT — the week
    ════════════════════════════════════════════════════════════════ */
 const DAYS = [
-    {n:'01', day:'Monday',    title:'Meet Your Machine',       car:'Formula 4',               skill:'Controls, Pedals & Completing a Lap'},
-    {n:'02', day:'Tuesday',   title:'Hit the Brakes',          car:'BMW M235i Racing',        skill:'When to Brake, Where to Brake, and Why'},
-    {n:'03', day:'Wednesday', title:'Find the Line',           car:'Porsche Boxster S',       skill:'The Racing Line + How Setup Changes Everything'},
-    {n:'04', day:'Thursday',  title:'Take Control',            car:'Mazda MX-5 Cup',          skill:'Manual Gears — When to Shift and Why', points:'Double Points'},
-    {n:'05', day:'Friday',    title:'Race Day — Championship', car:'Lamborghini Huracán GT3', skill:'Putting It All Together', points:'Triple Points Final'},
+    {
+        n:'01', day:'Monday', title:'Meet Your Machine', car:'Formula 4',
+        skill:'Controls, Pedals & Completing a Lap',
+        goal:'Every camper can drive a clean lap without going off track.',
+        am:[
+            {t:'9:00–9:20', h:'Welcome & Introductions', d:'Names, where everyone’s from, and have they driven anything before — a kart or a video game? We set a fun, welcoming tone and assign teams.'},
+            {t:'9:20–9:40', h:'Whiteboard: What’s Different About a Race Car?', d:'A family car vs. a Formula 4 on screen — what do you notice? Plus the big question: what exactly is a lap?'},
+            {t:'9:40–9:55', h:'Coach Demo Lap', d:'The coach drives one lap on the big screen, narrating out loud, so kids see what to do before anyone sits down.'},
+            {t:'9:55–11:00', h:'First Simulator Session — Just Drive', d:'No pressure. Complete laps without going off track while the coach walks behind each camper giving live feedback.'},
+            {t:'11:00–11:40', h:'Time Attack — Official Scored Lap', d:'40 minutes on the clock. Your best clean lap is your score. Top 3 earn championship points.'},
+            {t:'11:40–12:00', h:'Racing Basics Kahoot + Wrap-Up', d:'Easy, fun questions — flag colors, famous teams — and a preview of tomorrow.'},
+        ],
+        pm:[
+            {t:'1:00–1:30', h:'Big Screen Prediction Game', d:'Pause an F1 onboard before each corner — what does the driver do here? Builds observation skills.'},
+            {t:'1:30–2:30', h:'Second Sim Session — Get Smoother', d:'One specific thing to work on per camper. Focus on comfort and consistency, not speed.'},
+            {t:'2:30–3:00', h:'Reaction Time Challenge', d:'Head-to-head reaction test on phones, bracket-style. Just for fun — not scored.'},
+            {t:'3:00–4:00', h:'Fun Race + Day 1 Debrief', d:'A casual group race to end the day — a first taste of what Friday’s final will feel like.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Open Sim + Extra Racing', d:'Extension campers get free sim time and bonus race laps — any car, any track.'},
+    },
+    {
+        n:'02', day:'Tuesday', title:'Hit the Brakes', car:'BMW M235i Racing',
+        skill:'When to Brake, Where to Brake, and Why',
+        goal:'Every camper understands that braking happens BEFORE the corner, not during it.',
+        am:[
+            {t:'9:00–9:15', h:'Leaderboard Reveal + Day 2 Intro', d:'Show yesterday’s standings. Today we learn the most important skill in racing — but we don’t reveal it yet.'},
+            {t:'9:15–9:35', h:'Whiteboard: Braking Before the Corner', d:'A car can only do one thing well at a time. We draw a corner and show the braking zone that comes before it.'},
+            {t:'9:35–9:50', h:'Coach Demo: Late vs. Early Braking', d:'The coach drives the same corner two ways — kids call out what they see and discover the difference.'},
+            {t:'9:50–10:50', h:'Simulator Session — BMW M235i', d:'A visual reference point to brake at, the same spot every lap. Groups rotate with immediate feedback.'},
+            {t:'10:50–11:30', h:'Time Attack — Official Scored Lap', d:'40 minutes on the clock. Apply today’s braking lesson and go for your fastest clean lap.'},
+            {t:'11:30–12:00', h:'Crash Analysis on Big Screen', d:'A famous braking mistake — kids guess what went wrong using today’s vocabulary.'},
+        ],
+        pm:[
+            {t:'1:00–2:00', h:'Second Sim Session — Pick Your Own Braking Point', d:'Campers choose their own braking reference; the coach discusses the choices after each run.'},
+            {t:'2:00–2:30', h:'Whiteboard: Why Does the Car Slide?', d:'Brake too hard and the tires lock. We draw it and let the group discover what to do about it.'},
+            {t:'2:30–3:00', h:'Side-by-Side Telemetry', d:'Two campers’ laps compared on the big screen — the group works out who was faster and why.'},
+            {t:'3:00–4:00', h:'Fun Bracket Race + Debrief', d:'Head-to-head bracket racing for fun, with the coach pointing out braking moments live.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Time Attack + Free Sim', d:'Extra time attack for anyone chasing a better Day 2 score, then open sim time.'},
+    },
+    {
+        n:'03', day:'Wednesday', title:'Find the Line', car:'Porsche Boxster S',
+        skill:'The Racing Line + How Car Setup Changes Everything',
+        goal:'Every camper knows what an apex is, can try to hit it, and has felt how a better-set-up car unlocks more speed.',
+        special:'⚡ Today’s Special: The Setup Upgrade — same driver, same track, but fresh tires, less fuel, and tuned suspension. The difference is immediate.',
+        am:[
+            {t:'9:00–9:15', h:'Midweek Standings — Anyone Can Still Win', d:'Today’s lesson makes the biggest difference to lap time. Everyone is still in it.'},
+            {t:'9:15–9:35', h:'Whiteboard: The Fastest Way Around a Corner', d:'Every kid points to the path they’d take — most cut inside. Then we reveal the racing line.'},
+            {t:'9:35–9:50', h:'Coach Demo: Two Lines, Same Corner', d:'Cutting straight across vs. the racing line. Which was faster? The clock shows the answer.'},
+            {t:'9:50–10:40', h:'Simulator Session — Basic Setup', d:'Go wide, touch the inside curb, let the car drift back out. On a heavy fuel load with standard tires.'},
+            {t:'10:40–11:10', h:'⚡ Setup Upgrade — Same Car, Same Track', d:'Fresh tires, reduced fuel, optimized suspension. Campers feel the difference immediately and discuss what changed.'},
+            {t:'11:10–12:00', h:'Time Attack — Official Scored Lap', d:'50 minutes on the clock — the most of any day. Line, braking points, and a properly set-up car all together.'},
+        ],
+        pm:[
+            {t:'1:00–1:30', h:'Racing Line Kahoot', d:'Where’s the apex of this corner? True or false: cutting inside is always fastest? Standings update after.'},
+            {t:'1:30–2:30', h:'Second Sim Session — Wet Conditions', d:'Switch to rain. The racing line is slippery when wet — campers discover it by feel, not by being told.'},
+            {t:'2:30–3:00', h:'Big Screen: Spot the Line', d:'Pause famous onboard footage mid-corner — is the driver on the right line? Kids answer using today’s lesson.'},
+            {t:'3:00–3:30', h:'Wet vs. Dry Lap Challenge', d:'Unlimited laps in each condition — who adapts fastest? For fun, and always gets a reaction.'},
+            {t:'3:30–4:00', h:'Fun Bracket Race + Debrief', d:'1v1 races on dry track with live commentary. Preview: tomorrow is the hardest car of the week.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Setup Experiment + Free Sim', d:'Extension campers try more setup variations — even softer tires? less wing? — and experiment freely.'},
+    },
+    {
+        n:'04', day:'Thursday', title:'Take Control', car:'Mazda MX-5 Cup',
+        skill:'Manual Gears — When to Shift and Why',
+        goal:'Every camper has driven a manual car. Even one clean shift is a win.',
+        points:'Double Points',
+        am:[
+            {t:'9:00–9:15', h:'Double Points Announcement + Standings', d:'Today everything is worth double. Anyone can jump to the top — we reveal the standings slowly to build the drama.'},
+            {t:'9:15–9:35', h:'Whiteboard: A Bike With Gears', d:'Every kid knows bikes. Low gear = easier, slower; high gear = harder, faster. Cars work the same way.'},
+            {t:'9:35–9:50', h:'Coach Demo: Manual Driving', d:'“I’m pressing the clutch… shifting to 2nd… releasing slowly.” Stalling is normal — every driver has done it.'},
+            {t:'9:50–10:50', h:'Simulator Session — MX-5 Cup (Manual)', d:'Coach stays close for first-timers. A stall counter goes on the whiteboard as a group joke — stalling becomes funny, not embarrassing.'},
+            {t:'10:50–11:20', h:'Famous Stalling Moments in Racing', d:'Watch real race drivers stall out — why it happened and how they were penalized. Normalizes the challenge.'},
+            {t:'11:20–12:00', h:'Time Attack — Double Points', d:'40 minutes on the clock, worth double: 6 / 4 / 2 for the top 3. One great lap can flip the leaderboard.'},
+        ],
+        pm:[
+            {t:'1:00–1:30', h:'Stall Wall Reveal + Friday Preview', d:'Count up the stall tally together — celebratory, not shameful. Tomorrow is the fastest car of the week.'},
+            {t:'1:30–2:00', h:'Blindfolded Gear Sequence', d:'Find N → 1 → 2 → 3 → 4 by feel only, timed, with the crowd cheering. Just for fun.'},
+            {t:'2:00–3:00', h:'Second Sim Session — Combine All Skills', d:'Brake here, downshift, hit the apex, shift up on exit — the first taste of everything working together.'},
+            {t:'3:00–3:30', h:'Shift Point Review', d:'Pause one camper’s lap at every shift — good shift or too early/late? Individual coaching becomes a group moment.'},
+            {t:'3:30–4:00', h:'Fun Bracket Race + Championship Preview', d:'Head-to-head in the MX-5 for fun. The coach reveals standings and explains Friday’s format.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Free Sim + Manual Practice', d:'Extra open sim time focused on gear shifts — a relaxed setting to get more reps with the clutch.'},
+    },
+    {
+        n:'05', day:'Friday', title:'Race Day — Championship', car:'Lamborghini Huracán GT3',
+        skill:'Putting It All Together',
+        goal:'Everything learned this week comes together in one final race.',
+        points:'Triple Points Final',
+        am:[
+            {t:'9:00–9:15', h:'Full Week Standings Reveal', d:'Revealed from last place up to first. The final race is worth triple points — anything can still happen.'},
+            {t:'9:15–9:40', h:'Whiteboard: Wait — Isn’t That a Lamborghini?', d:'A GT3 is built on the street Huracán but turned into a race car. What would you change to make a road car faster?'},
+            {t:'9:40–10:30', h:'Practice — Taming the Raging Bull', d:'First laps in the GT3, getting a feel for what separates it from every other car this week.'},
+            {t:'10:30–11:15', h:'Qualifying — Sets the Grid', d:'45 minutes on the clock. Your fastest clean lap sets your starting position for the Final Race.'},
+            {t:'11:15–12:00', h:'Week Recap Kahoot', d:'Ten questions — two from each day. The winner earns a bonus point going into the final.'},
+        ],
+        pm:[
+            {t:'1:00–1:45', h:'THE FINAL RACE — Camp Championship', d:'Full grid, rolling start, 15 laps in the Lamborghini Huracán GT3 — all on the big screen with live coach commentary. 9 / 6 / 3 points.'},
+            {t:'1:45–2:15', h:'Awards Ceremony + Certificates', d:'Camp Champion and Most Improved announced. Every camper gets a certificate and a personal shoutout. Podium photos at the sims.'},
+            {t:'2:15–3:15', h:'Free Sim Session', d:'No coaching, no pressure — campers pick whatever they want from the week. Celebration time.'},
+            {t:'3:15–3:45', h:'Which Car Was Your Favorite?', d:'Every camper gives their ranking and why, and the coach ties each car back to its lesson.'},
+            {t:'3:45–4:00', h:'Podium Photos + Camp Send-Off', d:'Photos for the champion and all award winners — a strong emotional close for parents.'},
+        ],
+        ext:{t:'4:00–5:00', h:'Post-Championship Celebration Racing', d:'Extension campers enjoy open sim time after the ceremony — a great chance for parents to see the sims at pickup.'},
+    },
 ];
 
 const CHAMP = [
@@ -569,6 +722,43 @@ function renderInfo(){
     document.getElementById('info-btn').setAttribute('href', mailto);
 }
 
+function timeline(rows){
+    return `<div class="tl">${rows.map(r => `
+        <div class="tl-row">
+            <div class="tl-time">${r.t}</div>
+            <div class="tl-act"><div class="ta-t">${r.h}</div><div class="ta-d">${r.d}</div></div>
+        </div>`).join('')}</div>`;
+}
+
+function renderDays(){
+    document.getElementById('days-out').innerHTML = DAYS.map((day, i) => `
+        <div class="day" id="day-${i}">
+            <div class="day-head" onclick="toggleDay(${i})">
+                <div class="dnum">${day.n}</div>
+                <div class="dmain">
+                    <div class="dtitle">${day.day} · ${day.title}</div>
+                    <div class="dsub"><b>${day.car}</b> — ${day.skill}</div>
+                </div>
+                <div class="dchev">▾</div>
+            </div>
+            <div class="day-body">
+                <div class="day-goal"><b>Goal —</b> ${day.goal}</div>
+                ${day.special ? `<div class="note" style="margin:0 0 20px;"><p>${day.special}</p></div>` : ''}
+                <div class="tl-label am">Half Day · 9:00 AM – 12:00 PM</div>
+                ${timeline(day.am)}
+                <div class="day-pickup">Half Day Ends · 12:00 PM Pickup · Lunch 12–1 PM (Full Day)</div>
+                <div class="tl-label pm">Full Day Continues · 1:00 – 4:00 PM</div>
+                ${timeline(day.pm)}
+                <div class="tl-label ext">Optional Extension · 4:00 – 5:00 PM</div>
+                ${timeline([day.ext])}
+            </div>
+        </div>`).join('');
+}
+
+function toggleDay(i){
+    document.getElementById('day-'+i).classList.toggle('open');
+}
+
 function renderChamp(){
     document.getElementById('champ-rows').innerHTML = CHAMP.map(r => `
         <tr class="${r.cls||''}">
@@ -587,6 +777,7 @@ function renderSignup(){
 /* INIT */
 renderPhotos();
 renderSkillCards();
+renderDays();
 renderInfo();
 renderChamp();
 renderSignup();
