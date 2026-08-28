@@ -22,17 +22,6 @@ body{margin:0;background:var(--bg);color:#fff;font-family:var(--body);-webkit-fo
 a{color:inherit;}
 h1,h2,h3{margin:0;}
 
-/* ── NAV ── */
-.nav{position:sticky;top:0;z-index:500;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:1200px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.nav-brand{font-family:var(--cond);font-weight:900;font-size:1.1em;text-transform:uppercase;letter-spacing:1px;color:#fff;display:flex;align-items:center;gap:9px;}
-.nav-brand .dot{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red);}
-.nav-links{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
-.nav-links a{font-family:var(--cond);font-weight:800;font-size:0.78em;text-transform:uppercase;letter-spacing:1.5px;color:#888;text-decoration:none;padding:6px 12px;border-radius:6px;transition:color .15s,background .15s;}
-.nav-links a:hover{color:#fff;background:var(--card2);}
-.nav-links a.nav-cta{background:var(--red);color:#fff;}
-.nav-links a.nav-cta:hover{filter:brightness(1.12);background:var(--red);}
-
 /* ── SHARED ── */
 .section{padding:80px 40px;}
 .wrap{max-width:1200px;margin:0 auto;}
@@ -51,7 +40,7 @@ h1,h2,h3{margin:0;}
 .card{background:var(--card);border:1px solid var(--border);border-radius:14px;}
 
 /* ── HERO ── */
-.hero{padding:120px 40px 80px;background:var(--bg);position:relative;overflow:hidden;}
+.hero{padding:72px 40px 80px;background:var(--bg);position:relative;overflow:hidden;}
 .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(239,68,68,0.13) 0%,transparent 70%);pointer-events:none;}
 .hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center;}
 .hero h1{font-family:var(--cond);font-size:4.4em;font-weight:900;text-transform:uppercase;color:#fff;line-height:0.95;margin:18px 0 20px;}
@@ -153,8 +142,6 @@ h1,h2,h3{margin:0;}
 }
 @media(max-width:600px){
     .section{padding:36px 16px;}
-    .nav-inner{padding:11px 16px;}
-    .nav-links{display:none;}
     .h2{font-size:1.8em;}
 
     /* compact every centered section intro */
@@ -219,17 +206,6 @@ h1,h2,h3{margin:0;}
 </head>
 <body>
 
-<!-- ── NAV ── -->
-<nav class="nav"><div class="nav-inner">
-    <div class="nav-brand"><span class="dot"></span> STEM CAMP · WINTER '26</div>
-    <div class="nav-links">
-        <a href="#overview">Overview</a>
-        <a href="#features">What's Included</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#signup" class="nav-cta">Sign Up</a>
-    </div>
-</div></nav>
-
 <!-- ── HERO ── -->
 <header class="hero">
     <div class="hero-glow"></div>
@@ -239,7 +215,7 @@ h1,h2,h3{margin:0;}
             <h1>STEM CAMP<br><span class="accent">WINTER '26</span></h1>
             <p>Three days of racing, new friends, and hands-on STEM projects — all packed into one unforgettable winter break. Kids race each other on pro sims, build real projects, and leave with new friends and stories to tell.</p>
             <div class="hero-meta">
-                <span>Mon–Wed</span><span>Dec 28–30</span><span>Racing + STEM</span><span>Only 10 Spots</span>
+                <span>Mon–Wed</span><span>Dec 28–30</span><span>Racing + STEM</span><span>10 Spots Left</span>
             </div>
             <div class="hero-cta">
                 <a href="#signup" class="btn">RESERVE YOUR SPOT</a>
@@ -247,7 +223,7 @@ h1,h2,h3{margin:0;}
             </div>
             <div class="hero-stats">
                 <div class="hero-stat"><div class="v">3</div><div class="l">Days</div></div>
-                <div class="hero-stat"><div class="v">10</div><div class="l">Spots Total</div></div>
+                <div class="hero-stat"><div class="v">10</div><div class="l">Spots Left</div></div>
                 <div class="hero-stat"><div class="v">$500</div><div class="l">Registration</div></div>
                 <div class="hero-stat"><div class="v">9–6</div><div class="l">Hours</div></div>
             </div>
@@ -264,13 +240,13 @@ h1,h2,h3{margin:0;}
                 <div class="eyebrow">PROGRAM OVERVIEW</div>
                 <h2 class="h2" style="margin-bottom:20px;">A Different Kind Of Camp</h2>
                 <p>This winter, camp means something different. Three full days of racing on professional-grade motion simulators, real hands-on STEM projects every afternoon, and side-by-side action with new friends — all bunched into one unforgettable break.</p>
-                <p>Only <strong style="color:#ddd;">10 seats total</strong> in the whole camp, so every camper gets real attention, plenty of track time, and a lot of laughs along the way.</p>
+                <p>Just <strong style="color:#ddd;">20 seats total — half already booked</strong>, so groups stay small and every camper gets real attention, plenty of track time, and a lot of laughs along the way.</p>
                 <ul class="ov-feats">
                     <li>Three full days of racing on pro-grade motion sims (Dec 28–30)</li>
                     <li>Hands-on driving instruction — throttle, braking, reading the track</li>
                     <li>Hands-on STEM projects every afternoon, tied to racing &amp; engineering</li>
                     <li>Side-by-side racing with peers for friendly daily competition</li>
-                    <li>Just 10 seats — small groups mean real attention and new friends</li>
+                    <li>Just 20 seats total (10 still open) — small groups, real attention, new friends</li>
                 </ul>
             </div>
             <div class="car-photo" id="overview-photo" style="aspect-ratio:4/3;"></div>
@@ -285,8 +261,8 @@ h1,h2,h3{margin:0;}
         </div>
 
         <div class="note">
-            <div class="nt-t">⏳ Only 10 Spots — Filling Fast</div>
-            <p>Camp is capped at <strong style="color:#fff;">10 campers total</strong>, and the early-access window has already claimed half the seats. Once camp fills, it's closed — reserve now to secure yours.</p>
+            <div class="nt-t">⏳ 10 Seats Left — Filling Fast</div>
+            <p>Camp is capped at <strong style="color:#fff;">20 campers total</strong>, and half the seats are already claimed from the early-access window. Once camp fills, it's closed — reserve now to secure yours.</p>
         </div>
     </div>
 </section>
@@ -346,7 +322,7 @@ h1,h2,h3{margin:0;}
 
         <div class="center" style="margin-top:32px;">
             <a href="#signup" class="btn btn-lg">RESERVE YOUR SPOT</a>
-            <div class="lead" style="font-size:0.85em;margin-top:14px;">Just 10 seats total — reserve now before it fills.</div>
+            <div class="lead" style="font-size:0.85em;margin-top:14px;">Only 10 seats left out of 20 — reserve now before it fills.</div>
         </div>
     </div>
 </section>
@@ -369,7 +345,7 @@ h1,h2,h3{margin:0;}
     <div class="inner">
         <div class="eyebrow center">SECURE YOUR SEAT</div>
         <h2>Ready To Join The Grid?</h2>
-        <p>Just 10 seats total for the whole camp — and they’re filling fast. Reserve your seat today by signing up online, or reach out and we’ll help you get squared away.</p>
+        <p>Just 10 seats left out of 20 — half the camp is already booked and they’re filling fast. Reserve your seat today by signing up online, or reach out and we’ll help you get squared away.</p>
         <a href="#" id="signup-btn" class="btn btn-lg" target="_blank" rel="noopener">RESERVE YOUR SEAT</a>
         <div class="contact-row">
             <a href="tel:+12019881329" class="contact-item"><span class="ci-l">CALL US</span><span class="ci-v">(201) 988-1329</span></a>
@@ -383,10 +359,8 @@ h1,h2,h3{margin:0;}
 /* ════════════════════════════════════════════════════════════════
    CONFIG — edit these to brand the page
    ════════════════════════════════════════════════════════════════ */
-// STEM camp sign-up form URL. ⚠️ This currently points to the old summer-camp
-// Google Form — replace with the STEM camp form URL (the same URL your flyer's
-// QR code encodes) so the "Reserve Your Seat" button opens the right form.
-const SIGNUP_URL = 'https://forms.gle/9qbwVwXE8WU5vmAn6';
+// STEM Camp sign-up — the Acuity Scheduling page for the winter '26 camp.
+const SIGNUP_URL = 'https://sim1racing.as.me/stem-camp';
 
 // Photo URLs. Leave any blank to show a labeled placeholder instead.
 const PHOTOS = {
