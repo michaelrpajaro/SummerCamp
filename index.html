@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIM1Racing Summer Racing Camp 2026 — Paramus, NJ · Ages 7–17</title>
+<title>SIM1Racing STEM Camp Winter '26 — Paramus, NJ · Dec 28–30</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -80,44 +80,12 @@ h1,h2,h3{margin:0;}
 .ov-feats li:before{content:'✓';position:absolute;left:0;top:0;color:var(--red);font-weight:800;}
 
 /* ── SKILL / DAY CARDS ── */
-.week-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
-.week-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:24px 20px;position:relative;overflow:hidden;}
+.week-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.week-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:26px 22px;position:relative;overflow:hidden;}
 .week-card .bar{position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);}
-.week-card .num{font-family:var(--cond);font-size:2.4em;font-weight:900;color:var(--border3);line-height:1;}
-.week-card .wk{font-family:var(--cond);font-size:0.95em;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-top:6px;}
-.week-card .dt{font-family:var(--body);font-size:1.22em;font-weight:800;color:#fff;margin:7px 0 4px;line-height:1.15;}
-.week-card .car{font-family:var(--body);font-size:0.95em;font-weight:700;color:#ddd;margin-top:12px;}
-.week-card .meta{font-family:var(--body);font-size:0.85em;color:#999;margin-top:6px;line-height:1.45;}
-.week-card .pts{display:inline-block;margin-top:13px;font-family:var(--cond);font-size:0.7em;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold);background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.3);border-radius:6px;padding:3px 9px;}
-
-/* ── DAY-BY-DAY ACCORDION ── */
-.days{display:flex;flex-direction:column;gap:12px;}
-.day{background:var(--card2);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
-.day-head{display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer;user-select:none;transition:background .15s;}
-.day-head:hover{background:#161616;}
-.day-head .dnum{font-family:var(--cond);font-size:1.5em;font-weight:900;color:var(--red);min-width:44px;line-height:1;}
-.day-head .dmain{flex:1;min-width:0;}
-.day-head .dtitle{font-family:var(--cond);font-size:1.45em;font-weight:900;text-transform:uppercase;color:#fff;line-height:1.05;}
-.day-head .dsub{font-family:var(--body);font-size:0.9em;color:#999;margin-top:3px;}
-.day-head .dsub b{color:#ddd;font-weight:700;}
-.day-head .dchev{font-family:var(--cond);color:#666;font-size:1.4em;transition:transform .2s;flex-shrink:0;}
-.day.open .dchev{transform:rotate(180deg);}
-.day-body{display:none;padding:0 24px 24px;}
-.day.open .day-body{display:block;}
-.day-goal{font-family:var(--body);font-size:0.92em;color:#bbb;line-height:1.6;background:var(--card3);border:1px solid var(--border2);border-left:3px solid var(--red);border-radius:8px;padding:14px 16px;margin-bottom:20px;}
-.day-goal b{color:var(--red);font-family:var(--cond);font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:0.85em;}
-.tl-label{font-family:var(--cond);font-size:0.78em;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#777;margin:18px 0 12px;border-bottom:1px solid var(--border2);padding-bottom:7px;}
-.tl-label.am{color:var(--blue);}
-.tl-label.pm{color:var(--gold);}
-.tl-label.ext{color:var(--green);}
-.tl{display:flex;flex-direction:column;gap:2px;}
-.tl-row{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--border2);}
-.tl-row:last-child{border-bottom:none;}
-.tl-time{font-family:var(--body);font-size:0.85em;font-weight:700;color:#888;white-space:nowrap;}
-.tl-act .ta-t{font-family:var(--body);font-size:0.98em;font-weight:700;color:#fff;}
-.tl-act .ta-t .star{color:var(--gold);}
-.tl-act .ta-d{font-family:var(--body);font-size:0.86em;color:#999;line-height:1.5;margin-top:3px;}
-.day-pickup{font-family:var(--cond);font-size:0.78em;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#777;text-align:center;padding:10px;margin:6px 0;border-top:1px dashed var(--border3);border-bottom:1px dashed var(--border3);}
+.week-card .num{font-size:2.3em;line-height:1;margin-bottom:14px;}
+.week-card .dt{font-family:var(--cond);font-size:1.15em;font-weight:900;text-transform:uppercase;color:#fff;line-height:1.15;letter-spacing:0.5px;margin:0 0 10px;}
+.week-card .meta{font-family:var(--body);font-size:0.88em;color:#a8a8a8;line-height:1.55;}
 
 /* ── PRICING ── */
 .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
@@ -168,7 +136,12 @@ h1,h2,h3{margin:0;}
 .signup .inner{position:relative;z-index:1;max-width:720px;margin:0 auto;}
 .signup h2{font-family:var(--cond);font-size:3.2em;font-weight:900;text-transform:uppercase;color:#fff;line-height:1;}
 .signup p{font-family:var(--body);font-size:1.1em;color:#b0b0b0;line-height:1.6;margin:18px 0 30px;}
-.signup .sub-note{font-family:var(--body);font-size:0.85em;color:#666;margin-top:18px;}
+.signup .sub-note{font-family:var(--body);font-size:0.85em;color:#666;margin-top:22px;}
+.contact-row{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:28px;}
+.contact-item{display:flex;flex-direction:column;align-items:center;gap:3px;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-decoration:none;min-width:180px;transition:border-color .15s,background .15s;}
+.contact-item:hover{border-color:var(--red);background:#161010;}
+.contact-item .ci-l{font-family:var(--cond);font-size:0.72em;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--red);}
+.contact-item .ci-v{font-family:var(--body);font-size:1em;font-weight:700;color:#fff;}
 
 @media(max-width:900px){
     .hero-inner,.ov-grid,.price-grid{grid-template-columns:1fr;}
@@ -212,24 +185,12 @@ h1,h2,h3{margin:0;}
     .note{padding:15px 18px;margin-top:16px;}
     .note p{font-size:0.85em;}
 
-    /* skills — 2 up */
+    /* what's included — 2 up */
     .week-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
-    .week-card{padding:16px 13px;}
-    .week-card .num{font-size:1.9em;}
-    .week-card .dt{font-size:1.02em;}
-    .week-card .car{font-size:0.9em;margin-top:9px;}
-    .week-card .meta{font-size:0.8em;}
-
-    /* day-by-day accordion */
-    .day-head{padding:15px 16px;gap:12px;}
-    .day-head .dnum{font-size:1.25em;min-width:30px;}
-    .day-head .dtitle{font-size:1.08em;}
-    .day-head .dsub{font-size:0.82em;}
-    .day-body{padding:0 16px 18px;}
-    .tl-row{grid-template-columns:1fr;gap:2px;padding:9px 0;}
-    .tl-time{font-size:0.78em;}
-    .tl-act .ta-t{font-size:0.92em;}
-    .tl-act .ta-d{font-size:0.82em;}
+    .week-card{padding:18px 14px;}
+    .week-card .num{font-size:1.9em;margin-bottom:10px;}
+    .week-card .dt{font-size:1em;}
+    .week-card .meta{font-size:0.82em;}
 
     /* pricing */
     .price-grid{gap:16px;}
@@ -251,6 +212,8 @@ h1,h2,h3{margin:0;}
     .signup{padding:48px 18px;}
     .signup h2{font-size:2em;}
     .signup p{font-size:1em;margin:14px 0 22px;}
+    .contact-row{flex-direction:column;gap:10px;margin-top:22px;}
+    .contact-item{width:100%;min-width:0;padding:12px 18px;}
 }
 </style>
 </head>
@@ -258,11 +221,10 @@ h1,h2,h3{margin:0;}
 
 <!-- ── NAV ── -->
 <nav class="nav"><div class="nav-inner">
-    <div class="nav-brand"><span class="dot"></span> SUMMER RACING CAMP</div>
+    <div class="nav-brand"><span class="dot"></span> STEM CAMP · WINTER '26</div>
     <div class="nav-links">
         <a href="#overview">Overview</a>
-        <a href="#skills">The Week</a>
-        <a href="#schedule">Day by Day</a>
+        <a href="#features">What's Included</a>
         <a href="#pricing">Pricing</a>
         <a href="#signup" class="nav-cta">Sign Up</a>
     </div>
@@ -274,20 +236,20 @@ h1,h2,h3{margin:0;}
     <div class="hero-inner">
         <div>
             <span class="badge">SIM1Racing · Paramus, NJ</span>
-            <h1>SUMMER RACING<br><span class="accent">CAMP 2026</span></h1>
-            <p>Drive five real race cars — from a nimble Formula 4 to a roaring Lamborghini — go wheel-to-wheel with the other campers, and have a blast getting genuinely fast. No experience needed: total beginners are racing for the championship by Friday.</p>
+            <h1>STEM CAMP<br><span class="accent">WINTER '26</span></h1>
+            <p>Three days of racing, new friends, and hands-on STEM projects — all packed into one unforgettable winter break. Kids race each other on pro sims, build real projects, and leave with new friends and stories to tell.</p>
             <div class="hero-meta">
-                <span>Mon–Fri</span><span>Ages 7–17</span><span>No Experience Needed</span><span>Max 12 / Week</span>
+                <span>Mon–Wed</span><span>Dec 28–30</span><span>Racing + STEM</span><span>Only 10 Spots</span>
             </div>
             <div class="hero-cta">
                 <a href="#signup" class="btn">RESERVE YOUR SPOT</a>
-                <a href="#skills" class="btn btn-outline">SEE THE WEEK</a>
+                <a href="#features" class="btn btn-outline">SEE WHAT'S INCLUDED</a>
             </div>
             <div class="hero-stats">
-                <div class="hero-stat"><div class="v">5</div><div class="l">Days</div></div>
-                <div class="hero-stat"><div class="v">5</div><div class="l">Race Cars</div></div>
-                <div class="hero-stat"><div class="v">12</div><div class="l">Max Campers</div></div>
-                <div class="hero-stat"><div class="v">7–17</div><div class="l">Ages</div></div>
+                <div class="hero-stat"><div class="v">3</div><div class="l">Days</div></div>
+                <div class="hero-stat"><div class="v">10</div><div class="l">Spots Total</div></div>
+                <div class="hero-stat"><div class="v">$500</div><div class="l">Registration</div></div>
+                <div class="hero-stat"><div class="v">9–6</div><div class="l">Hours</div></div>
             </div>
         </div>
         <div class="car-photo" id="hero-photo"></div>
@@ -300,136 +262,102 @@ h1,h2,h3{margin:0;}
         <div class="ov-grid">
             <div class="ov-text">
                 <div class="eyebrow">PROGRAM OVERVIEW</div>
-                <h2 class="h2" style="margin-bottom:20px;">Five Race Cars, One Epic Week</h2>
-                <p>Every day you climb into a different machine and learn the one skill that unlocks it. By Friday you've gone from your very first lap to racing a Lamborghini Huracán GT3 wheel-to-wheel against the rest of the camp.</p>
-                <p>A fresh group runs <strong style="color:#ddd;">every week all summer long</strong>, capped at 12 campers — so every kid gets plenty of real coaching, seat time, and racing.</p>
+                <h2 class="h2" style="margin-bottom:20px;">A Different Kind Of Camp</h2>
+                <p>This winter, camp means something different. Three full days of racing on professional-grade motion simulators, real hands-on STEM projects every afternoon, and side-by-side action with new friends — all bunched into one unforgettable break.</p>
+                <p>Only <strong style="color:#ddd;">10 seats total</strong> in the whole camp, so every camper gets real attention, plenty of track time, and a lot of laughs along the way.</p>
                 <ul class="ov-feats">
-                    <li>Drive 5 different race cars — a new machine every day</li>
-                    <li>Go head-to-head against other campers for championship points</li>
-                    <li>A live leaderboard, daily drama, and a Friday championship final</li>
-                    <li>Awards ceremony with a printed certificate to take home</li>
-                    <li>Real coaching on pro-grade racing sims — no experience needed</li>
+                    <li>Three full days of racing on pro-grade motion sims (Dec 28–30)</li>
+                    <li>Hands-on driving instruction — throttle, braking, reading the track</li>
+                    <li>Hands-on STEM projects every afternoon, tied to racing &amp; engineering</li>
+                    <li>Side-by-side racing with peers for friendly daily competition</li>
+                    <li>Just 10 seats — small groups mean real attention and new friends</li>
                 </ul>
             </div>
             <div class="car-photo" id="overview-photo" style="aspect-ratio:4/3;"></div>
         </div>
 
         <div class="bonus">
-            <div class="bico">⭐</div>
+            <div class="bico">🎁</div>
             <div class="btxt">
-                <div class="bt-t">Full Week Bonus — Unlimited Sim Racing</div>
-                <div class="bt-d">Book any full week of camp and get unlimited open sim time all week long — drop in any day the facility is open and keep racing. Week registrants only.</div>
+                <div class="bt-t">EARLYBIRD — 10% Off Before 9/30</div>
+                <div class="bt-d">Use code <strong style="color:#fff;">EARLYBIRD</strong> at sign-up to take 10% off before September 30. Save on registration and lock in one of the last remaining seats.</div>
             </div>
         </div>
 
         <div class="note">
-            <div class="nt-t">⏳ Running All Summer — Spots Are Limited</div>
-            <p>This program runs every week throughout the summer with a new group each week. <strong style="color:#fff;">Maximum 12 campers per week</strong> — once a week fills up, it's closed. Book early to secure your spot.</p>
+            <div class="nt-t">⏳ Only 10 Spots — Filling Fast</div>
+            <p>Camp is capped at <strong style="color:#fff;">10 campers total</strong>, and the early-access window has already claimed half the seats. Once camp fills, it's closed — reserve now to secure yours.</p>
         </div>
     </div>
 </section>
 
-<!-- ── SKILL PROGRESSION ── -->
-<section class="section" id="skills" style="background:var(--bg);">
+<!-- ── WHAT'S INCLUDED ── -->
+<section class="section" id="features" style="background:var(--bg);">
     <div class="wrap">
         <div class="center" style="margin-bottom:40px;">
-            <div class="eyebrow">SKILL PROGRESSION</div>
-            <h2 class="h2">A New Race Car Every Day</h2>
-            <p class="lead" style="max-width:720px;margin:14px auto 0;">Five days, five very different cars. Each day you master the one skill that car is built to teach — then put it on the line racing the other campers.</p>
+            <div class="eyebrow">WHAT'S INCLUDED</div>
+            <h2 class="h2">Everything Your Camper Gets</h2>
+            <p class="lead" style="max-width:720px;margin:14px auto 0;">Three days packed with driving, racing, and hands-on projects — designed to build confidence, curiosity, and new friendships.</p>
         </div>
-        <div class="week-grid" id="skill-cards"></div>
-    </div>
-</section>
-
-<!-- ── DAY BY DAY ── -->
-<section class="section" id="schedule" style="background:var(--bg2);">
-    <div class="wrap-md">
-        <div class="center" style="margin-bottom:40px;">
-            <div class="eyebrow">A LOOK INSIDE THE WEEK</div>
-            <h2 class="h2">Day By Day</h2>
-            <p class="lead" style="max-width:720px;margin:14px auto 0;">Tap any day to see the full schedule — morning half-day, afternoon full-day, and the optional evening extension.</p>
-        </div>
-        <div class="days" id="days-out"></div>
+        <div class="week-grid" id="feature-cards"></div>
     </div>
 </section>
 
 <!-- ── PRICING ── -->
-<section class="section" id="pricing" style="background:var(--bg);">
+<section class="section" id="pricing" style="background:var(--bg2);">
     <div class="wrap">
-        <div class="center" style="margin-bottom:44px;">
+        <div class="center" style="margin-bottom:36px;">
             <div class="eyebrow">REGISTRATION</div>
-            <h2 class="h2">Pick Your Pass</h2>
-            <p class="lead" style="max-width:640px;margin:14px auto 0;">Come for a single day or stay all week to chase the camp championship. Every full-week pass also unlocks unlimited sim time all week.</p>
+            <h2 class="h2">One Price, All Three Days</h2>
+            <p class="lead" style="max-width:640px;margin:14px auto 0;">One flat rate covers sim time, hands-on driving instruction, side-by-side racing, and every afternoon’s STEM project — all three days.</p>
         </div>
-        <div class="price-grid">
-            <div class="price-card">
-                <div class="pname">Half Day</div>
-                <div class="phours">9:00 AM – 12:00 PM</div>
-                <ul class="pfeats">
-                    <li>Whiteboard lesson (15–20 min)</li>
-                    <li>Coached simulator session + Time Attack</li>
-                    <li>Daily championship points</li>
-                    <li>Lunch not included — pickup at noon</li>
-                </ul>
-                <div class="price-rows">
-                    <div class="pr"><div class="amt">$80</div><div class="per">Per Day</div></div>
-                    <div class="pr"><div class="amt">$350</div><div class="per">Full Week</div><div class="inc">★ Unlimited sim all week</div></div>
-                </div>
-            </div>
+
+        <div style="max-width:560px;margin:0 auto;">
             <div class="price-card feature">
-                <div class="rec"><span class="badge">★ Recommended</span></div>
-                <div class="pname">Full Day</div>
-                <div class="phours">9:00 AM – 4:00 PM</div>
+                <div class="rec"><span class="badge">Winter '26</span></div>
+                <div class="pname">Winter STEM Camp</div>
+                <div class="phours">Mon–Wed · Dec 28–30 · 9:00 AM – 6:00 PM</div>
                 <ul class="pfeats">
-                    <li>Everything in the Half Day</li>
-                    <li>12–1 PM lunch break (bring your own food)</li>
-                    <li>Second coached sim rotation (1–4 PM)</li>
-                    <li>Bonus activities and fun competitions</li>
-                    <li>Friday ceremony with printed certificate</li>
+                    <li>3 full days on professional-grade motion simulators</li>
+                    <li>Hands-on driving instruction — no experience needed</li>
+                    <li>Side-by-side racing with other campers all day long</li>
+                    <li>Hands-on STEM project every afternoon (4–6 PM)</li>
+                    <li>Bring your own lunch — small groups, real attention</li>
                 </ul>
                 <div class="price-rows">
-                    <div class="pr"><div class="amt">$150</div><div class="per">Per Day</div></div>
-                    <div class="pr"><div class="amt">$600</div><div class="per">Full Week</div><div class="inc">★ Unlimited sim all week</div></div>
+                    <div class="pr">
+                        <div class="amt">$500</div>
+                        <div class="per">Plus Tax · All 3 Days</div>
+                        <div class="inc">★ EARLYBIRD saves 10% before 9/30</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="deals">
+        <div class="deals" style="grid-template-columns:1fr;max-width:640px;margin:22px auto 0;">
             <div class="deal multi">
                 <div class="pct">10%</div>
                 <div>
-                    <div class="dt">Off Every Extra Week</div>
-                    <div class="dd">Book your first full week, then take 10% off each additional full week you add — perfect for back-to-back summer camps.</div>
-                </div>
-            </div>
-            <div class="deal gold">
-                <div class="pct">5%</div>
-                <div>
-                    <div class="dt">Gold Member Discount</div>
-                    <div class="dd">SIM1Racing Gold members save 5% on everything — every day pass, full week, and add-on.</div>
+                    <div class="dt">EARLYBIRD Discount</div>
+                    <div class="dd">Use code <strong style="color:#fff;">EARLYBIRD</strong> at sign-up before <strong style="color:#fff;">September 30</strong> to save 10% off registration.</div>
                 </div>
             </div>
         </div>
 
-        <div class="note">
-            <div class="nt-t">⏰ Optional 5 PM Extension</div>
-            <p>Stay until 5:00 PM for extra sim time, free racing, and additional competitions. <code>+$20 per day</code> or <code>+$80 for the full week</code>. Extension campers must be pre-registered.</p>
-        </div>
-
-        <div class="center" style="margin-top:34px;">
-            <a href="#signup" class="btn btn-lg">SIGN UP NOW</a>
-            <div class="lead" style="font-size:0.85em;margin-top:14px;">No payment up front — fill out the form and we’ll send an invoice within 1–2 days, with any multi-week or Gold discounts applied.</div>
+        <div class="center" style="margin-top:32px;">
+            <a href="#signup" class="btn btn-lg">RESERVE YOUR SPOT</a>
+            <div class="lead" style="font-size:0.85em;margin-top:14px;">Just 10 seats total — reserve now before it fills.</div>
         </div>
     </div>
 </section>
 
 <!-- ── GALLERY ── -->
-<section class="section" id="gallery" style="background:var(--bg2);">
+<section class="section" id="gallery" style="background:var(--bg);">
     <div class="wrap">
         <div class="center" style="margin-bottom:40px;">
-            <div class="eyebrow">FROM THE FACILITY</div>
+            <div class="eyebrow">INSIDE THE FACILITY</div>
             <h2 class="h2">See It In Action</h2>
-            <p class="lead" style="max-width:640px;margin:14px auto 0;">Pro racing sims, side-by-side battles, big-screen finals, and podium celebrations from camp.</p>
+            <p class="lead" style="max-width:640px;margin:14px auto 0;">Pro-grade motion sims, side-by-side racing, big-screen action, and camp moments from previous sessions.</p>
         </div>
         <div class="gallery" id="gallery-out"></div>
     </div>
@@ -439,11 +367,15 @@ h1,h2,h3{margin:0;}
 <section class="signup" id="signup">
     <div class="signup-glow"></div>
     <div class="inner">
-        <div class="eyebrow center">SECURE YOUR WEEK</div>
-        <h2>Ready To Race?</h2>
-        <p>Just 12 seats per week — and they go fast. Fill out the quick sign-up form to request your week, and we’ll send an invoice within 1–2 days to lock in your spot.</p>
-        <a href="#" id="signup-btn" class="btn btn-lg" target="_blank" rel="noopener">START YOUR SIGN-UP</a>
-        <div class="sub-note">No payment now — just the form. Your spot is confirmed once the invoice is paid. · Paramus, NJ</div>
+        <div class="eyebrow center">SECURE YOUR SEAT</div>
+        <h2>Ready To Join The Grid?</h2>
+        <p>Just 10 seats total for the whole camp — and they’re filling fast. Reserve your seat today by signing up online, or reach out and we’ll help you get squared away.</p>
+        <a href="#" id="signup-btn" class="btn btn-lg" target="_blank" rel="noopener">RESERVE YOUR SEAT</a>
+        <div class="contact-row">
+            <a href="tel:+12019881329" class="contact-item"><span class="ci-l">CALL US</span><span class="ci-v">(201) 988-1329</span></a>
+            <a href="mailto:info@sim1racing.com" class="contact-item"><span class="ci-l">EMAIL US</span><span class="ci-v">info@sim1racing.com</span></a>
+        </div>
+        <div class="sub-note">Paramus, NJ · Follow us <strong style="color:#bbb;">@sim1racing</strong></div>
     </div>
 </section>
 
@@ -451,7 +383,9 @@ h1,h2,h3{margin:0;}
 /* ════════════════════════════════════════════════════════════════
    CONFIG — edit these to brand the page
    ════════════════════════════════════════════════════════════════ */
-// Paste your camp registration link here (a checkout page, form, etc.)
+// STEM camp sign-up form URL. ⚠️ This currently points to the old summer-camp
+// Google Form — replace with the STEM camp form URL (the same URL your flyer's
+// QR code encodes) so the "Reserve Your Seat" button opens the right form.
 const SIGNUP_URL = 'https://forms.gle/9qbwVwXE8WU5vmAn6';
 
 // Photo URLs. Leave any blank to show a labeled placeholder instead.
@@ -468,113 +402,28 @@ const PHOTOS = {
 };
 
 /* ════════════════════════════════════════════════════════════════
-   CONTENT — the week
+   CONTENT — what's included
    ════════════════════════════════════════════════════════════════ */
-const DAYS = [
+const FEATURES = [
     {
-        n:'01', day:'Monday', title:'Meet Your Machine', car:'Formula 4',
-        skill:'Controls, Pedals & Completing a Lap',
-        goal:'Every camper can drive a clean lap without going off track.',
-        am:[
-            {t:'9:00–9:20', h:'Welcome & Introductions', d:'Names, where everyone’s from, and have they driven anything before — a kart or a video game? We set a fun, welcoming tone and assign teams.'},
-            {t:'9:20–9:40', h:'Whiteboard: What’s Different About a Race Car?', d:'A family car vs. a Formula 4 on screen — what do you notice? Plus the big question: what exactly is a lap?'},
-            {t:'9:40–9:55', h:'Coach Demo Lap', d:'The coach drives one lap on the big screen, narrating out loud, so kids see what to do before anyone sits down.'},
-            {t:'9:55–11:00', h:'First Simulator Session — Just Drive', d:'No pressure. Complete laps without going off track while the coach walks behind each camper giving live feedback.'},
-            {t:'11:00–11:40', h:'Time Attack — Official Scored Lap', d:'40 minutes on the clock. Your best clean lap is your score. Top 3 earn championship points.'},
-            {t:'11:40–12:00', h:'Racing Basics Kahoot + Wrap-Up', d:'Easy, fun questions — flag colors, famous teams — and a preview of tomorrow.'},
-        ],
-        pm:[
-            {t:'1:00–1:30', h:'Big Screen Prediction Game', d:'Pause an F1 onboard before each corner — what does the driver do here? Builds observation skills.'},
-            {t:'1:30–2:30', h:'Second Sim Session — Get Smoother', d:'One specific thing to work on per camper. Focus on comfort and consistency, not speed.'},
-            {t:'2:30–3:00', h:'Reaction Time Challenge', d:'Head-to-head reaction test on phones, bracket-style. Just for fun — not scored.'},
-            {t:'3:00–4:00', h:'Fun Race + Day 1 Debrief', d:'A casual group race to end the day — a first taste of what Friday’s final will feel like.'},
-        ],
-        ext:{t:'4:00–5:00', h:'Open Sim + Extra Racing', d:'Extension campers get free sim time and bonus race laps — any car, any track.'},
+        icon:'📅',
+        title:'Three (3) Days of Camp',
+        desc:'Campers get access to professional-grade motion simulators across three days of camp, Monday through Wednesday. Plenty of track time to build confidence and learn new skills behind the wheel.',
     },
     {
-        n:'02', day:'Tuesday', title:'Hit the Brakes', car:'BMW M235i Racing',
-        skill:'When to Brake, Where to Brake, and Why',
-        goal:'Every camper understands that braking happens BEFORE the corner, not during it.',
-        am:[
-            {t:'9:00–9:15', h:'Leaderboard Reveal + Day 2 Intro', d:'Show yesterday’s standings. Today we learn the most important skill in racing — but we don’t reveal it yet.'},
-            {t:'9:15–9:35', h:'Whiteboard: Braking Before the Corner', d:'A car can only do one thing well at a time. We draw a corner and show the braking zone that comes before it.'},
-            {t:'9:35–9:50', h:'Coach Demo: Late vs. Early Braking', d:'The coach drives the same corner two ways — kids call out what they see and discover the difference.'},
-            {t:'9:50–10:50', h:'Simulator Session — BMW M235i', d:'A visual reference point to brake at, the same spot every lap. Groups rotate with immediate feedback.'},
-            {t:'10:50–11:30', h:'Time Attack — Official Scored Lap', d:'40 minutes on the clock. Apply today’s braking lesson and go for your fastest clean lap.'},
-            {t:'11:30–12:00', h:'Crash Analysis on Big Screen', d:'A famous braking mistake — kids guess what went wrong using today’s vocabulary.'},
-        ],
-        pm:[
-            {t:'1:00–2:00', h:'Second Sim Session — Pick Your Own Braking Point', d:'Campers choose their own braking reference; the coach discusses the choices after each run.'},
-            {t:'2:00–2:30', h:'Whiteboard: Why Does the Car Slide?', d:'Brake too hard and the tires lock. We draw it and let the group discover what to do about it.'},
-            {t:'2:30–3:00', h:'Side-by-Side Telemetry', d:'Two campers’ laps compared on the big screen — the group works out who was faster and why.'},
-            {t:'3:00–4:00', h:'Fun Bracket Race + Debrief', d:'Head-to-head bracket racing for fun, with the coach pointing out braking moments live.'},
-        ],
-        ext:{t:'4:00–5:00', h:'Time Attack + Free Sim', d:'Extra time attack for anyone chasing a better Day 2 score, then open sim time.'},
+        icon:'🏎️',
+        title:'Learn How to Drive',
+        desc:'Kids get hands-on instruction on the fundamentals of sim-racing — throttle and braking control, reading the track, and finding the racing line. No prior experience needed.',
     },
     {
-        n:'03', day:'Wednesday', title:'Find the Line', car:'Porsche Boxster S',
-        skill:'The Racing Line + How Car Setup Changes Everything',
-        goal:'Every camper knows what an apex is, can try to hit it, and has felt how a better-set-up car unlocks more speed.',
-        special:'⚡ Today’s Special: The Setup Upgrade — same driver, same track, but fresh tires, less fuel, and tuned suspension. The difference is immediate.',
-        am:[
-            {t:'9:00–9:15', h:'Midweek Standings — Anyone Can Still Win', d:'Today’s lesson makes the biggest difference to lap time. Everyone is still in it.'},
-            {t:'9:15–9:35', h:'Whiteboard: The Fastest Way Around a Corner', d:'Every kid points to the path they’d take — most cut inside. Then we reveal the racing line.'},
-            {t:'9:35–9:50', h:'Coach Demo: Two Lines, Same Corner', d:'Cutting straight across vs. the racing line. Which was faster? The clock shows the answer.'},
-            {t:'9:50–10:40', h:'Simulator Session — Basic Setup', d:'Go wide, touch the inside curb, let the car drift back out. On a heavy fuel load with standard tires.'},
-            {t:'10:40–11:10', h:'⚡ Setup Upgrade — Same Car, Same Track', d:'Fresh tires, reduced fuel, optimized suspension. Campers feel the difference immediately and discuss what changed.'},
-            {t:'11:10–12:00', h:'Time Attack — Official Scored Lap', d:'50 minutes on the clock — the most of any day. Line, braking points, and a properly set-up car all together.'},
-        ],
-        pm:[
-            {t:'1:00–1:30', h:'Racing Line Kahoot', d:'Where’s the apex of this corner? True or false: cutting inside is always fastest? Standings update after.'},
-            {t:'1:30–2:30', h:'Second Sim Session — Wet Conditions', d:'Switch to rain. The racing line is slippery when wet — campers discover it by feel, not by being told.'},
-            {t:'2:30–3:00', h:'Big Screen: Spot the Line', d:'Pause famous onboard footage mid-corner — is the driver on the right line? Kids answer using today’s lesson.'},
-            {t:'3:00–3:30', h:'Wet vs. Dry Lap Challenge', d:'Unlimited laps in each condition — who adapts fastest? For fun, and always gets a reaction.'},
-            {t:'3:30–4:00', h:'Fun Bracket Race + Debrief', d:'1v1 races on dry track with live commentary. Preview: tomorrow is the hardest car of the week.'},
-        ],
-        ext:{t:'4:00–5:00', h:'Setup Experiment + Free Sim', d:'Extension campers try more setup variations — even softer tires? less wing? — and experiment freely.'},
+        icon:'🏁',
+        title:'Racing Fun with Others',
+        desc:'Campers race alongside their peers throughout the day, turning practice into friendly competition. A great way to have fun and make new friends.',
     },
     {
-        n:'04', day:'Thursday', title:'Take Control', car:'Mazda MX-5 Cup',
-        skill:'Manual Gears — When to Shift and Why',
-        goal:'Every camper has driven a manual car. Even one clean shift is a win.',
-        points:'Double Points',
-        am:[
-            {t:'9:00–9:15', h:'Double Points Announcement + Standings', d:'Today everything is worth double. Anyone can jump to the top — we reveal the standings slowly to build the drama.'},
-            {t:'9:15–9:35', h:'Whiteboard: A Bike With Gears', d:'Every kid knows bikes. Low gear = easier, slower; high gear = harder, faster. Cars work the same way.'},
-            {t:'9:35–9:50', h:'Coach Demo: Manual Driving', d:'“I’m pressing the clutch… shifting to 2nd… releasing slowly.” Stalling is normal — every driver has done it.'},
-            {t:'9:50–10:50', h:'Simulator Session — MX-5 Cup (Manual)', d:'Coach stays close for first-timers. A stall counter goes on the whiteboard as a group joke — stalling becomes funny, not embarrassing.'},
-            {t:'10:50–11:20', h:'Famous Stalling Moments in Racing', d:'Watch real race drivers stall out — why it happened and how they were penalized. Normalizes the challenge.'},
-            {t:'11:20–12:00', h:'Time Attack — Double Points', d:'40 minutes on the clock, worth double: 6 / 4 / 2 for the top 3. One great lap can flip the leaderboard.'},
-        ],
-        pm:[
-            {t:'1:00–1:30', h:'Stall Wall Reveal + Friday Preview', d:'Count up the stall tally together — celebratory, not shameful. Tomorrow is the fastest car of the week.'},
-            {t:'1:30–2:00', h:'Blindfolded Gear Sequence', d:'Find N → 1 → 2 → 3 → 4 by feel only, timed, with the crowd cheering. Just for fun.'},
-            {t:'2:00–3:00', h:'Second Sim Session — Combine All Skills', d:'Brake here, downshift, hit the apex, shift up on exit — the first taste of everything working together.'},
-            {t:'3:00–3:30', h:'Shift Point Review', d:'Pause one camper’s lap at every shift — good shift or too early/late? Individual coaching becomes a group moment.'},
-            {t:'3:30–4:00', h:'Fun Bracket Race + Championship Preview', d:'Head-to-head in the MX-5 for fun. The coach reveals standings and explains Friday’s format.'},
-        ],
-        ext:{t:'4:00–5:00', h:'Free Sim + Manual Practice', d:'Extra open sim time focused on gear shifts — a relaxed setting to get more reps with the clutch.'},
-    },
-    {
-        n:'05', day:'Friday', title:'Race Day — Championship', car:'Lamborghini Huracán GT3',
-        skill:'Putting It All Together',
-        goal:'Everything learned this week comes together in one final race.',
-        points:'Triple Points Final',
-        am:[
-            {t:'9:00–9:15', h:'Full Week Standings Reveal', d:'Revealed from last place up to first. The final race is worth triple points — anything can still happen.'},
-            {t:'9:15–9:40', h:'Whiteboard: Wait — Isn’t That a Lamborghini?', d:'A GT3 is built on the street Huracán but turned into a race car. What would you change to make a road car faster?'},
-            {t:'9:40–10:30', h:'Practice — Taming the Raging Bull', d:'First laps in the GT3, getting a feel for what separates it from every other car this week.'},
-            {t:'10:30–11:15', h:'Qualifying — Sets the Grid', d:'45 minutes on the clock. Your fastest clean lap sets your starting position for the Final Race.'},
-            {t:'11:15–12:00', h:'Week Recap Kahoot', d:'Ten questions — two from each day. The winner earns a bonus point going into the final.'},
-        ],
-        pm:[
-            {t:'1:00–1:45', h:'THE FINAL RACE — Camp Championship', d:'Full grid, rolling start, 15 laps in the Lamborghini Huracán GT3 — all on the big screen with live coach commentary. 9 / 6 / 3 points.'},
-            {t:'1:45–2:15', h:'Awards Ceremony + Certificates', d:'Camp Champion and Most Improved announced. Every camper gets a certificate and a personal shoutout. Podium photos at the sims.'},
-            {t:'2:15–3:15', h:'Free Sim Session', d:'No coaching, no pressure — campers pick whatever they want from the week. Celebration time.'},
-            {t:'3:15–3:45', h:'Which Car Was Your Favorite?', d:'Every camper gives their ranking and why, and the coach ties each car back to its lesson.'},
-            {t:'3:45–4:00', h:'Podium Photos + Camp Send-Off', d:'Photos for the champion and all award winners — a strong emotional close for parents.'},
-        ],
-        ext:{t:'4:00–5:00', h:'Post-Championship Celebration Racing', d:'Extension campers enjoy open sim time after the ceremony — a great chance for parents to see the sims at pickup.'},
+        icon:'⚛️',
+        title:'Daily STEM Projects',
+        desc:'Every afternoon from 4 to 6 PM, campers dive into a hands-on STEM project tied to racing and engineering — creativity and problem-solving woven into the day.',
     },
 ];
 
@@ -594,7 +443,7 @@ function fillPhoto(el, url, icon, title, sub, alt){
 
 function renderPhotos(){
     fillPhoto(document.getElementById('hero-photo'), PHOTOS.hero,
-        '🏁', 'Hero Photo', 'Set PHOTOS.hero to a wide shot of the sim rigs or a camper racing.', 'SIM1Racing Summer Camp');
+        '🏁', 'Hero Photo', 'Set PHOTOS.hero to a wide shot of the sim rigs or a camper racing.', 'SIM1Racing STEM Camp Winter 2026');
     fillPhoto(document.getElementById('overview-photo'), PHOTOS.overview,
         '📸', 'Coaching Photo', 'Set PHOTOS.overview to a whiteboard or coaching moment.', 'Camp coaching session');
     document.getElementById('gallery-out').innerHTML = (PHOTOS.gallery || []).map(g => {
@@ -606,53 +455,13 @@ function renderPhotos(){
     }).join('');
 }
 
-function renderSkillCards(){
-    document.getElementById('skill-cards').innerHTML = DAYS.map(day => `
+function renderFeatures(){
+    document.getElementById('feature-cards').innerHTML = FEATURES.map(f => `
         <div class="week-card"><div class="bar"></div>
-            <div class="num">${day.n}</div>
-            <div class="wk">${day.day}</div>
-            <div class="dt">${day.title}</div>
-            <div class="car">${day.car}</div>
-            <div class="meta">${day.skill}</div>
-            ${day.points ? `<div class="pts">${day.points}</div>` : ''}
+            <div class="num">${f.icon}</div>
+            <div class="dt">${f.title}</div>
+            <div class="meta">${f.desc}</div>
         </div>`).join('');
-}
-
-function timeline(rows){
-    return `<div class="tl">${rows.map(r => `
-        <div class="tl-row">
-            <div class="tl-time">${r.t}</div>
-            <div class="tl-act"><div class="ta-t">${r.h}</div><div class="ta-d">${r.d}</div></div>
-        </div>`).join('')}</div>`;
-}
-
-function renderDays(){
-    document.getElementById('days-out').innerHTML = DAYS.map((day, i) => `
-        <div class="day" id="day-${i}">
-            <div class="day-head" onclick="toggleDay(${i})">
-                <div class="dnum">${day.n}</div>
-                <div class="dmain">
-                    <div class="dtitle">${day.day} · ${day.title}</div>
-                    <div class="dsub"><b>${day.car}</b> — ${day.skill}</div>
-                </div>
-                <div class="dchev">▾</div>
-            </div>
-            <div class="day-body">
-                <div class="day-goal"><b>Goal —</b> ${day.goal}</div>
-                ${day.special ? `<div class="note" style="margin:0 0 20px;"><p>${day.special}</p></div>` : ''}
-                <div class="tl-label am">Half Day · 9:00 AM – 12:00 PM</div>
-                ${timeline(day.am)}
-                <div class="day-pickup">Half Day Ends · 12:00 PM Pickup · Lunch 12–1 PM (Full Day)</div>
-                <div class="tl-label pm">Full Day Continues · 1:00 – 4:00 PM</div>
-                ${timeline(day.pm)}
-                <div class="tl-label ext">Optional Extension · 4:00 – 5:00 PM</div>
-                ${timeline([day.ext])}
-            </div>
-        </div>`).join('');
-}
-
-function toggleDay(i){
-    document.getElementById('day-'+i).classList.toggle('open');
 }
 
 function renderSignup(){
@@ -662,8 +471,7 @@ function renderSignup(){
 
 /* INIT */
 renderPhotos();
-renderSkillCards();
-renderDays();
+renderFeatures();
 renderSignup();
 </script>
 </body>
